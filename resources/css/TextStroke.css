@@ -1,0 +1,24 @@
+.text-stroke {
+    color: transparent; /* Text color */
+    -webkit-text-stroke: 3px rgb(226, 97, 12); /* Stroke width and color */
+}
+.text-strokeH1 {
+    color: transparent; /* Text color */
+    -webkit-text-stroke: 3px rgb(240, 236, 233); /* Stroke width and color */
+}
+.text-strokeH1:hover {
+    -webkit-text-stroke: 3px rgb(226, 97, 12);
+}
+/* .animationText {
+    animation: 'loopscroll' 30s linear infinite;
+}
+@keyframes {
+    loop-scroll {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+} */
