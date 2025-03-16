@@ -66,7 +66,7 @@ const SlideContents = [
         Gif: EhsanGif,
     },
     {
-        name: 'Ostadkhalid',
+        name: 'khalid',
         image: Ostadkhalid,
         level: 'Managing Director',
         Gif: '',
@@ -152,7 +152,7 @@ const Legends = () => {
                                     className="absolute top-0 left-0 hidden h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                                 />
                             </div>
-                            <div className="flex flex-col items-center justify-center bg-[#2c2368] p-4">
+                            <div className="flex flex-col items-center justify-center bg-[#2baa8d] p-4">
                                 <h4 className="text-xl font-semibold">{x.name}</h4>
                                 <p className="mb-t text-lg font-semibold">{x.level}</p>
                             </div>

@@ -86,9 +86,9 @@ const Footer = () => {
                                 Welcome to our digital agency We specialize in helping business most like yours succeed online.
                             </p>
                         </div>
-                        <div className="bg-red-500rounded-sm mx-[20px] flex items-center justify-between border border-gray-700">
-                            <div className="flex w-full items-center justify-between bg-transparent">
-                                <input type="email" placeholder="Enter You Email " className="mx-6 w-[350px] bg-transparent py-4 text-xl" />
+                        <div className=" rounded-sm mx-[20px] flex items-center justify-between border border-gray-500 ">
+                            <div className="flex w-full items-center justify-between bg-transparent  ">
+                                <input type="email" placeholder="Enter You Email " className="outline-none mx-6 w-full bg-transparent py-4 text-lg text-gray-300" />
 
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

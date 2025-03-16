@@ -23,16 +23,16 @@ const ExpanIdea = () => {
         </div>
         <div className=" max-w-full py-4 ">
           <h1 className="text-6xl font-bold  text-white  w-[90%]  2xl:text-6xl  2xl:leading-tight xl:text-7xl  lg:text-6xl md:text-6xl sm:text-4xl  ">
-            Giving Your Business Some Great Ideas
+          Building <span className="text-[#2baa8d]">Tomorrow’s </span>Technology from today’s vision
           </h1>
         </div>
 
         <div className=" py-4 ">
           <p className="text-lg text-white w-[90%] ">
-            Bring to the table win-win survival strategies to ensure proactive
-            domination. At the end of the day, going forward, a new normal that
-            has evolved from generation on the runway heading towards a
-            streamlined cloud solution going forward porttitor dictum sapien.
+          At Al-Kharazmi, we don't just build software; we shape the future. 
+          Your ideas become the foundation of tomorrow's technology, as we blend innovation,
+         creativity,
+           and technical expertise to craft solutions that push boundaries. Together, let's turn your vision into digital experiences that inspire and lead the way forward.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const ExpanIdea = () => {
           </div>
           <div className=" max-w-full flex justify-between items-start  ">
             <h1 className=" group-hover:text-[#2baa8d] font-bold text-gray-800 2xl:text-6xl  xl:text-5xl  lg:text-4xl md:text-3xl max-sm:text-3xl ">
-              UI / UX Experience
+           Accounting Systems
             </h1>
             <div>
               {" "}
@@ -108,7 +108,7 @@ const ExpanIdea = () => {
           </div>
           <div className=" max-w-full flex justify-between items-start  ">
             <h1 className=" font-bold text-gray-800 2xl:text-6xl xl:text-5xl  lg:text-4xl md:text-3xl max-sm:text-3xl group-hover:text-[#2baa8d] ">
-              Web Development
+              Web Aplications
             </h1>
             <div>
               {" "}
@@ -146,7 +146,7 @@ const ExpanIdea = () => {
           </div>
           <div className=" max-w-full flex justify-between items-start ">
             <h1 className="  font-bold text-gray-800 2xl:text-6xl  xl:text-5xl  lg:text-4xl md:text-3xl max-sm:text-3xl group-hover:text-[#2baa8d]  ">
-              Digital Marketing
+            Graphic Designs
             </h1>
             <div>
               {" "}
@@ -184,7 +184,7 @@ const ExpanIdea = () => {
           </div>
           <div className=" max-w-full flex justify-between items-start ">
             <h1 className="font-bold text-gray-800 2xl:text-6xl  xl:text-5xl  lg:text-4xl md:text-3xl sm:text-3xl max-sm:text-3xl group-hover:text-[#2baa8d] ">
-              Product Design
+             Hosting Services
             </h1>
             <div>
               {" "}

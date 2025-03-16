@@ -8,22 +8,36 @@ const SliderPart = () => {
   const SliderContent = [
     {
       url: framarz,
-      text: " posuere luctus orci. Donec vitae mattis quam, vitae tempor arcu.Aenean non odio porttitor, convallis erat sit amet .",
-      name: "Framarz",
-      level: "Senior Designer",
+      text: "As a leading importer of large vehicles, faced management challenges in finance and logistics. The implementation of the Transport ERP system in the company's accounting program brought about significant transformation. This system integrated all processes. It improved team productivity, enabled better profit and loss analysis. Additionally, the system's diverse functionalities and strong support from the development team.",
+      name: "Faramarz Fayzi",
+      level: "Financial Manager Munib Soheib Khatibi Company",
     },
+    
+    
+   
+
+
     {
       url: mobin,
-      text: " facilisis velit. Nulla ornare convallis malesuada. Phasellus molestie,  ipsum ac fringilla.",
-      name: "Mobin",
-      level: "Senior Designer",
+      text: "Working with Al-Kharazmi Company was a great experience. They created an easy-to-use and reliable accounting system that perfectly fits our needs. It has improved our efficiency, saved us time, and made managing our finances much easier. Their team was professional, helpful, and always available to answer questions. We highly recommend them to anyone looking for a good accounting software solution.",
+      name: "Mobin Siddiqui",
+      level: "Anardarah Petroleum Company CEO",
     },
+
+
+    
+
     {
       url: rahmani,
-      text: " posuere luctus orci. Donec vitae mattis quam, vitae tempor arcu.Aenean non odio porttitor, convallis erat sit amet, facilisis velit. Nulla ornare convallis malesuada. Phasellus molestie,  ipsum ac fringilla.",
-      name: "Rahmani",
-      level: "Senior Designer",
+      text: "  I would like to take this time to appreciate Alkharazmi programming company for their great services and professionalism. Nanonet Educational Academy's website is designed and developed by this brilliant company. My experience as Nanonet manager was really pleasing and productive with Alkharazmi Company in all aspects of the project including price and maintenance. I hope success and betterment for all members Alkharazmi's company.",
+      name: "Ebrahim Rahmani",
+      level: "Nano Net Academy Manager",
     },
+    
+   
+   
+
+
   ];
 
   const [current, setCurrent] = useState(0);
@@ -121,6 +135,7 @@ const SliderPart = () => {
               </svg>
             </h2>
           </div>
+          
         </div>
       </div>
 
@@ -149,7 +164,7 @@ const SliderPart = () => {
             </div>
 
             <div className="mx-4">
-              <h4 className="text-white text-3xl mx-3 ">
+              <h4 className="text-white text-xl mx-3 ">
                 {SliderContent[current].text}
               </h4>
             </div>
