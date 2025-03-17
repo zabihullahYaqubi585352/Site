@@ -5,11 +5,11 @@ const Banar = () => {
     return (
         <div className="sm: relative z-[1] mx-auto max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="absolute -z-[3] hidden h-full w-full items-center justify-around gap-4 lg:flex">
-                <div className="h-full w-[1px] bg-gray-700"></div>
-                <div className="h-full w-[1px] bg-gray-700"></div>
-                <div className="h-full w-[1px] bg-gray-700"></div>
-                <div className="h-full w-[1px] bg-gray-700"></div>
-                <div className="h-full w-[1px] bg-gray-700"></div>{' '}
+                <div className="h-full w-[1px] bg-gray-900"></div>
+                <div className="h-full w-[1px] bg-gray-900"></div>
+                <div className="h-full w-[1px] bg-gray-900"></div>
+                <div className="h-full w-[1px] bg-gray-900"></div>
+                <div className="h-full w-[1px] bg-gray-900"></div>{' '}
             </div>
             <div className="bg-grenn relative z-[3] pt-[200px] pb-[100px] sm:max-w-[500px] sm:pt-[300px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
                 <h1 className="-z-[6] mx-8 text-[32px] font-bold text-white uppercase sm:text-[50px]sm:mx-4 lg:text-[70px] xl:text-[100px] xl:font-extrabold">
@@ -93,18 +93,18 @@ const Banar = () => {
 
                 
                 <img src={star} alt="" className="absolute top-[150px] left-[150px] -z-[1] block rounded-full object-cover sm:top-[220px] max-sm:left-[100px] lg:top-[260px]" />
-                <div className="group absolute bottom-[350px] -left-[140px] hidden -rotate-90 items-center gap-[24px] xl:flex">
-                    <a href="" className="text-[16px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
-                        mail : info@xpovio.com
+                <div className="group absolute bottom-[350px] -left-[150px] hidden -rotate-90 items-center gap-[24px] xl:flex">
+                    <a href="" className="text-[14px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
+                        mail : alkharazmi.soft@gmail.com
                     </a>
-                    <a href="" className="text-[16px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
-                        Call : +99 2158 003 6980
+                    <a href="" className="text-[14px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
+                        Call : +93 797658636
                     </a>
                 </div>
                 <div className="absolute -right-[80px] bottom-[250px] hidden -rotate-90 items-center gap-[24px] hover:text-[#2baa8d] xl:flex">
-                    <a className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">facebook</a>
-                    <a className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">Linkedin</a>
-                    <a className="text-[16px] text-gray-500 uppercase hover:[[#2baa8d]">instagram</a>
+                    <a href='https://www.facebook.com/profile.php?id=61568762697550' target='_blank'  className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">facebook</a>
+                    <a href='https://www.linkedin.com/company/alkharazmi/posts/?feedView=all' target='_blank'  className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">Linkedin</a>
+                    
                 
                 </div>
             </div>

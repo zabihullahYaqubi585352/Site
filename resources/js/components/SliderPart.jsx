@@ -10,7 +10,8 @@ const SliderPart = () => {
       url: framarz,
       text: "As a leading importer of large vehicles, faced management challenges in finance and logistics. The implementation of the Transport ERP system in the company's accounting program brought about significant transformation. This system integrated all processes. It improved team productivity, enabled better profit and loss analysis. Additionally, the system's diverse functionalities and strong support from the development team.",
       name: "Faramarz Fayzi",
-      level: "Financial Manager Munib Soheib Khatibi Company",
+      level: "Financial Manager",
+      location:" Munib Soheib Khatibi Company"
     },
     
     
@@ -21,7 +22,8 @@ const SliderPart = () => {
       url: mobin,
       text: "Working with Al-Kharazmi Company was a great experience. They created an easy-to-use and reliable accounting system that perfectly fits our needs. It has improved our efficiency, saved us time, and made managing our finances much easier. Their team was professional, helpful, and always available to answer questions. We highly recommend them to anyone looking for a good accounting software solution.",
       name: "Mobin Siddiqui",
-      level: "Anardarah Petroleum Company CEO",
+      level: " CEO",
+      location:"Anardarah Petroleum Company"
     },
 
 
@@ -29,9 +31,10 @@ const SliderPart = () => {
 
     {
       url: rahmani,
-      text: "  I would like to take this time to appreciate Alkharazmi programming company for their great services and professionalism. Nanonet Educational Academy's website is designed and developed by this brilliant company. My experience as Nanonet manager was really pleasing and productive with Alkharazmi Company in all aspects of the project including price and maintenance. I hope success and betterment for all members Alkharazmi's company.",
+      text: "  I would like to take this time to appreciate Alkharazmi programming company for their great services and professionalism. Nanonet Educational Academy's website is designed and developed by this brilliant company. My experience as Nanonet manager was really pleasing and productive with Alkharazmi Company in all aspects of the project including price and maintenance. I hope success and betterment for all members Alkharazmi's company. .",
       name: "Ebrahim Rahmani",
-      level: "Nano Net Academy Manager",
+      level: " Manager",
+      location:"Nano Net Academy"
     },
     
    
@@ -95,8 +98,8 @@ const SliderPart = () => {
               </svg>
             </h2>
           </div>
-          <div className="loop-scroll block mx-[15px] float-left h-full">
-            <h2 className="  hover:text-[#2baa8d] text-white text-3xl lg:text-6xl xl:text-8xl 2xl:text-9xl font-bold flex items-center  uppercase">
+          <div className="loop-scrool block float-left h-full ">
+            <h2 className="   hover:text-[#2baa8d] text-white  text-3xl lg:text-6xl xl:text-8xl 2xl:text-9xl font-bold flex items-center  uppercase">
               <a
                 href=""
                 className="inline-flex items-center gap-[8px] outline-0"
@@ -136,6 +139,7 @@ const SliderPart = () => {
             </h2>
           </div>
           
+          
         </div>
       </div>
 
@@ -169,11 +173,14 @@ const SliderPart = () => {
               </h4>
             </div>
             <div className="mx-4">
-              <h5 className="text-white text-2xl mx-3  ">
+              <h5 className="text-white text-2xl mx-3 pb-4 ">
                 {SliderContent[current].name}
               </h5>
-              <p className="text-[#2baa8d] text-xl mx-3  ">
+              <p className="text-white text-xl mx-3  ">
                 {SliderContent[current].level}
+              </p>
+              <p className="text-white text-xl mx-3  ">
+                {SliderContent[current].location}
               </p>
             </div>
           </div>

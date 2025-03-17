@@ -1,4 +1,4 @@
-import NewImage2 from '../../../public/build/assets/New.jpg';
+import NewImage2 from '../../../public/build/assets/1.jpg';
 import NewImage1 from '../../../public/build/assets/New1.jpg';
 
 const NewBlogsPart = () => {

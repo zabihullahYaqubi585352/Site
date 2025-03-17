@@ -3,7 +3,7 @@ const Header = () => {
     return (
     
          <div className=" bg-red-300 w-full  ">
-            <div className=" z-[999] w-full border border-b-gray-700 fixed top-0 bg-black ">
+            <div className=" z-[999] w-full border border-b-gray-900 fixed top-0 bg-black ">
                 {' '}
 
                 {/* px-4 absolute   use insted h-[120px] flex justify-center items-center  fixed top-0   */}

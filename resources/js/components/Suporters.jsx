@@ -3,6 +3,7 @@ import './TextStroke.css'
 
 const Suporters = () => {
   return (
+    <div>
     <div className="   py-20  mx-auto flex px-4 2xl:max-w-[1440px]  xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[800px] sm: max-w-[500px] ">
       <div className="flex space-x-16 overflow-hidden ">
         <div className=" flex  space-x-16 loop-image ">
@@ -266,6 +267,9 @@ const Suporters = () => {
         </div>
       </div>
     </div>
+    
+    </div>
+    
   );
 };
 export default Suporters;

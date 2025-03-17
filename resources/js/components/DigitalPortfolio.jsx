@@ -5,6 +5,8 @@ import three from '../../../public/build/assets/550X450/Layer 3.png';
 import four from '../../../public/build/assets/550X450/Layer 4.png';
 import five from '../../../public/build/assets/550X450/Layer 5.png';
 import six from '../../../public/build/assets/550X450/Layer 6.jpg'
+import seven from "../../../public/build/assets/accs.jpg"
+import eight from "../../../public/build/assets/graphic.jpg"
 import './TextStroke.css'
 const DigitalPortfolio = () => {
     const portfolios = [
@@ -14,8 +16,8 @@ const DigitalPortfolio = () => {
         { img: four, title: 'Metal' },
         { img: five, title: 'Abacus' },
         { img: six, title: 'Abaptix' },
-        { img: five, title: 'Abacus' },
-        { img: six, title: 'Abaptix' },
+        { img: seven, title: 'graphics' },
+        { img: eight, title: 'graphics' },
     ];
     return (
         <section className="sm: relative mx-auto mb-[40px] block max-w-[500px] px-10 py-[100px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">

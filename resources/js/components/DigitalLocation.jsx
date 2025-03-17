@@ -2,8 +2,8 @@ import digital1 from '../../../public/build/assets/herat.jpg';
 import digital2 from '../../../public/build/assets/smart solution.jpg'
 const DigitalLocation = () => {
     return (
-        <div className="mx-auto bg-[#0e0e0e]  sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-            <div className="mx-10 grid h-auto grid-cols-2 gap-10 py-44 max-lg:grid-cols-1">
+        <div className="mx-auto py-30 bg-[#0e0e0e] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+            <div className= "  mx-10 grid h-auto grid-cols-2 gap-10  max-lg:grid-cols-1">
                 <div className="relative max-w-[80%] py-32 max-md:h-[550px] max-sm:h-[550px] sm:h-[500px] md:h-[750px]">
                     <img src={digital1} alt="" className="left[0px] absolute top-0 z-0 object-cover" />
 
@@ -13,7 +13,7 @@ const DigitalLocation = () => {
                         className="absolute left-[250px] z-10 px-4 max-sm:left-[100px] sm:left-[100px] md:left-[200px] lg:left-[100px] xl:left-[100px] 2xl:left-[200px]"
                     />
                 </div>
-                <div className="grid grid-cols-1 gap-6 px-4 max-sm:h-[750px] h-[550px] ">
+                <div className="grid grid-cols-1 gap-6 px-4 h-auto ">
                     <div className="ml-[15px] flex h-[50px] w-[150px] cursor-pointer justify-center gap-2 rounded-3xl border border-gray-700">
                         {' '}
                         <div className="flex items-center justify-center text-lg text-[#2baa8d]">WELCOME</div>
