@@ -1,12 +1,12 @@
 
-import one from '../../../public/build/assets/550X450/Layer 1.png';
-import tow from '../../../public/build/assets/550X450/Layer 2.png';
-import three from '../../../public/build/assets/550X450/Layer 3.png';
-import four from '../../../public/build/assets/550X450/Layer 4.png';
-import five from '../../../public/build/assets/550X450/Layer 5.png';
-import six from '../../../public/build/assets/550X450/Layer 6.jpg'
-import seven from "../../../public/build/assets/accs.jpg"
-import eight from "../../../public/build/assets/graphic.jpg"
+import one from '../../../public/assets/550X450/Layer 1.webp';
+import tow from '../../../public/assets/550X450/Layer 2.webp';
+import three from '../../../public/assets/550X450/Layer 3.webp';
+import four from '../../../public/assets/550X450/Layer 4.webp';
+import five from '../../../public/assets/550X450/Layer 5.webp';
+import six from '../../../public/assets/550X450/Layer 6.webp'
+import seven from "../../../public/assets/550X450/Layer 7.webp"
+import eight from "../../../public/assets/550X450/Layer 8.webp"
 import './TextStroke.css'
 const DigitalPortfolio = () => {
     const portfolios = [
@@ -16,8 +16,8 @@ const DigitalPortfolio = () => {
         { img: four, title: 'Metal' },
         { img: five, title: 'Abacus' },
         { img: six, title: 'Abaptix' },
-        { img: seven, title: 'graphics' },
-        { img: eight, title: 'graphics' },
+        { img: seven, title: 'TopBook' },
+        { img: eight, title: 'Afghan Sharq' },
     ];
     return (
         <section className="sm: relative mx-auto mb-[40px] block max-w-[500px] px-10 py-[100px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">

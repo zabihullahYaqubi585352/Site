@@ -1,25 +1,25 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import Razeq from '../../../public/build/assets/LegendPhotos/abdulrazeq.jpg';
-import AhmadShah from '../../../public/build/assets/LegendPhotos/ahmadShah.png';
-import Arsalan from '../../../public/build/assets/LegendPhotos/arsalan.png';
-import Ehsan from '../../../public/build/assets/LegendPhotos/ehsan.png';
-import Hamid from '../../../public/build/assets/LegendPhotos/hamid.png';
-import Ostadkhalid from '../../../public/build/assets/LegendPhotos/khaled.png';
-import Mostafa from '../../../public/build/assets/LegendPhotos/mostafa.png';
-import Nasim from '../../../public/build/assets/LegendPhotos/nasim.png';
-import Sebghat from '../../../public/build/assets/LegendPhotos/sebghat.png';
-import zabihullah from '../../../public/build/assets/LegendPhotos/zabihullah.png';
-import AhmadShahGif from '../../../public/build/assets/cpmpressed/AhmadShah.gif';
-import ArsalanGif from '../../../public/build/assets/cpmpressed/Arsalan.gif';
-import EhsanGif from '../../../public/build/assets/cpmpressed/Ehsan.gif';
-import HamidGif from '../../../public/build/assets/cpmpressed/Hamid.gif';
-import MostafaGif from '../../../public/build/assets/cpmpressed/Mostafa.gif';
-import NasimGif from '../../../public/build/assets/cpmpressed/Nasim.gif';
-import RazeqGif from '../../../public/build/assets/cpmpressed/Razeq.gif';
-import SebghatGif from '../../../public/build/assets/cpmpressed/Sebghat.gif';
-import zabihGif from '../../../public/build/assets/cpmpressed/Zabih.gif';
+import Razeq from '../../../public/assets/LegendPhotos/abdulrazeq.webp';
+import AhmadShah from '../../../public/assets/LegendPhotos/ahmadShah.webp';
+import Arsalan from '../../../public/assets/LegendPhotos/arsalan.webp';
+import Ehsan from '../../../public/assets/LegendPhotos/ehsan.webp';
+import Hamid from '../../../public/assets/LegendPhotos/hamid.webp';
+import Ostadkhalid from '../../../public/assets/LegendPhotos/khaled.webp';
+import Mostafa from '../../../public/assets/LegendPhotos/mostafa.webp';
+import Nasim from '../../../public/assets/LegendPhotos/nasim.webp';
+import Sebghat from '../../../public/assets/LegendPhotos/sebghat.webp';
+import zabihullah from '../../../public/assets/LegendPhotos/zabihullah.webp';
+import AhmadShahGif from '../../../public/assets/cpmpressed/AhmadShah.gif';
+import ArsalanGif from '../../../public/assets/cpmpressed/Arsalan.gif';
+import EhsanGif from '../../../public/assets/cpmpressed/Ehsan.gif';
+import HamidGif from '../../../public/assets/cpmpressed/Hamid.gif';
+import MostafaGif from '../../../public/assets/cpmpressed/Mostafa.gif';
+import NasimGif from '../../../public/assets/cpmpressed/Nasim.gif';
+import RazeqGif from '../../../public/assets/cpmpressed/Razeq.gif';
+import SebghatGif from '../../../public/assets/cpmpressed/Sebghat.gif';
+import zabihGif from '../../../public/assets/cpmpressed/Zabih.gif';
 
 const SlideContents = [
     {

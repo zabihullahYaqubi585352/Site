@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import'./TextStroke.css'
-import  framarz from '../../../public/build/assets/testimonials/framarz.jpg'
-import mobin from '../../../public/build/assets/testimonials/mobin.jpg'
-import  rahmani from '../../../public/build/assets/testimonials/rahmani.jpg'
+import  framarz from '../../../public/assets/testimonials/framarz.webp'
+import mobin from '../../../public/assets/testimonials/mobin.webp'
+import  rahmani from '../../../public/assets/testimonials/rahmani.webp'
 
 const SliderPart = () => {
   const SliderContent = [

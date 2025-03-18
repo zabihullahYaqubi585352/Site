@@ -1,5 +1,5 @@
 ;
-import star from '../../../public/build/assets/star.png';
+import star from '../../../public/assets/star.webp';
 import '../../css/TextStroke.css';
 const Banar = () => {
     return (

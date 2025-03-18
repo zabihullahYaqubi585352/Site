@@ -1,4 +1,4 @@
-import logo from '../../../public/build/assets/alkharazmi_heroLogo_100.png';
+import logo from '../../../public/assets/alkharazmi_heroLogo_100.webp';
 const Header = () => {
     return (
     

@@ -1,4 +1,4 @@
-import logo from '../../../public/build/assets/alkharazmi_heroLogo_100.png';
+import logo from '../../../public/assets/alkharazmi_heroLogo_100.webp';
 const Footer = () => {
     return (
         <div className="scrollbar-webkit relative mt-20 grid w-full grid-cols-1 gap-10 bg-[#0e0e0e]">
