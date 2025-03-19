@@ -84,7 +84,7 @@ const Banar = () => {
                             <p class="text-xl text-gray-500">Years Of Experience</p>
                         </div>
                         <div className="flex flex-col items-start">
-                            <h5 className="text-4xl text-[#2baa8d]">25k </h5>
+                            <h5 className="text-4xl text-[#2baa8d]">25 </h5>
                             <p class="text-xl text-gray-500">Completed Projects</p>
                         </div>
                     </div>
