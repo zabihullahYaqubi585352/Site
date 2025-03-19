@@ -1,5 +1,4 @@
-;
-import star from '../../../public/assets/star.webp';
+const star = '/assets/star.webp';
 import '../../css/TextStroke.css';
 const Banar = () => {
     return (
@@ -17,18 +16,18 @@ const Banar = () => {
                         <div className="relative inline-block">A</div>
                         <div className="relative inline-block">l</div>
                         <div className="relative inline-block">-</div>
-                        <div className="relative inline-block">k</div> 
+                        <div className="relative inline-block">k</div>
                         <div className="relative inline-block">h</div>
                         <div className="relative inline-block">a</div>
                         <div className="relative inline-block">r</div>
-                        <div className="relative inline-block">a</div> 
+                        <div className="relative inline-block">a</div>
                         <div className="relative inline-block">z</div>
                         <div className="relative inline-block">m</div>
                         <div className="relative inline-block">i</div>
                     </div>
                     <div className="relative ml-8 inline-block ">
                         <div className="relative inline-block">A</div>
-                    
+
                     </div>
                     <span className="text-stroke ml-3 font-sans">
                         <div className="relative inline-block">
@@ -91,7 +90,7 @@ const Banar = () => {
                     </div>
                 </div>
 
-                
+
                 <img src={star} alt="" className="absolute top-[150px] left-[150px] -z-[1] block rounded-full object-cover sm:top-[220px] max-sm:left-[100px] lg:top-[260px]" />
                 <div className="group absolute bottom-[350px] -left-[150px] hidden -rotate-90 items-center gap-[24px] xl:flex">
                     <a href="" className="text-[14px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
@@ -104,8 +103,8 @@ const Banar = () => {
                 <div className="absolute -right-[80px] bottom-[250px] hidden -rotate-90 items-center gap-[24px] hover:text-[#2baa8d] xl:flex">
                     <a href='https://www.facebook.com/profile.php?id=61568762697550' target='_blank'  className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">facebook</a>
                     <a href='https://www.linkedin.com/company/alkharazmi/posts/?feedView=all' target='_blank'  className="text-[16px] text-gray-500 uppercase hover:text-[#2baa8d]">Linkedin</a>
-                    
-                
+
+
                 </div>
             </div>
         </div>

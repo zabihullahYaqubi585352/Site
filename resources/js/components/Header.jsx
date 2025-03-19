@@ -1,7 +1,7 @@
-import logo from '../../../public/assets/alkharazmi_heroLogo_100.webp';
+const logo = '/assets/alkharazmi_heroLogo_100.webp';
 const Header = () => {
     return (
-    
+
          <div className=" bg-red-300 w-full  ">
             <div className=" z-[999] w-full border border-b-gray-900 fixed top-0 bg-black ">
                 {' '}
@@ -18,10 +18,10 @@ const Header = () => {
                 </div>
             </div>
         </div>
-        
-        
-   
-        
+
+
+
+
     );
 };
 export default Header;

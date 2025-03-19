@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import'./TextStroke.css'
-import  framarz from '../../../public/assets/testimonials/framarz.webp'
-import mobin from '../../../public/assets/testimonials/mobin.webp'
-import  rahmani from '../../../public/assets/testimonials/rahmani.webp'
+const  framarz = '/assets/testimonials/framarz.webp'
+const mobin = '/assets/testimonials/mobin.webp'
+const  rahmani = '/assets/testimonials/rahmani.webp'
 
 const SliderPart = () => {
   const SliderContent = [
@@ -13,9 +13,9 @@ const SliderPart = () => {
       level: "Financial Manager",
       location:" Munib Soheib Khatibi Company"
     },
-    
-    
-   
+
+
+
 
 
     {
@@ -27,7 +27,7 @@ const SliderPart = () => {
     },
 
 
-    
+
 
     {
       url: rahmani,
@@ -36,9 +36,9 @@ const SliderPart = () => {
       level: " Manager",
       location:"Nano Net Academy"
     },
-    
-   
-   
+
+
+
 
 
   ];
@@ -138,8 +138,8 @@ const SliderPart = () => {
               </svg>
             </h2>
           </div>
-          
-          
+
+
         </div>
       </div>
 

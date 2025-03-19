@@ -1,4 +1,4 @@
-import logo from '../../../public/assets/alkharazmi_heroLogo_100.webp';
+const logo = '/assets/alkharazmi_heroLogo_100.webp';
 const Footer = () => {
     return (
         <div className="scrollbar-webkit relative mt-20 grid w-full grid-cols-1 gap-10 bg-[#0e0e0e]">
@@ -28,7 +28,7 @@ const Footer = () => {
                                     </svg>
                                   Almas-e-sharq-Gulha square - Herat - Afghanistan
                                 </div>
-                              
+
                             </div>
                             <div className='flex flex-col justify-center items-start gap-2 xl:flex-row xl:justify-between '>
                             <div className="  group flex items-center justify-center text-md text-white ">
@@ -64,7 +64,7 @@ const Footer = () => {
                                 <div className="group-hover:text-[#2baa8d]">alkharazmi.soft@gmail.com</div>
                             </div>
                             </div>
-                           
+
                         </div>
 
                         <div className="mt-10 flex h-[60px] w-[240px] justify-center rounded-[40px] border border-gray-700 hover:bg-[#2baa8d]">
@@ -132,7 +132,7 @@ const Footer = () => {
                                 />
                             </svg>
                         </a>
-                       
+
                         <a href='https://www.facebook.com/profile.php?id=61568762697550' target='_blank' className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 320 512">
                                 <path

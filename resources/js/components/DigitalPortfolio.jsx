@@ -1,12 +1,12 @@
 
-import one from '../../../public/assets/550X450/Layer 1.webp';
-import tow from '../../../public/assets/550X450/Layer 2.webp';
-import three from '../../../public/assets/550X450/Layer 3.webp';
-import four from '../../../public/assets/550X450/Layer 4.webp';
-import five from '../../../public/assets/550X450/Layer 5.webp';
-import six from '../../../public/assets/550X450/Layer 6.webp'
-import seven from "../../../public/assets/550X450/Layer 7.webp"
-import eight from "../../../public/assets/550X450/Layer 8.webp"
+const one = '/assets/550X450/Layer 1.webp';
+const tow = '/assets/550X450/Layer 2.webp';
+const three = '/assets/550X450/Layer 3.webp';
+const four = '/assets/550X450/Layer 4.webp';
+const five = '/assets/550X450/Layer 5.webp';
+const six = '/assets/550X450/Layer 6.webp'
+const seven = "/assets/550X450/Layer 7.webp"
+const eight = "/assets/550X450/Layer 8.webp"
 import './TextStroke.css'
 const DigitalPortfolio = () => {
     const portfolios = [
@@ -91,7 +91,7 @@ const DigitalPortfolio = () => {
                                 viewBox="0 -960 960 960"
                                 width="50px"
                                 fill="transparent"
-                              
+
                                 className="stroke-[#2baa8d]stroke-[10] lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
                             >
                                 <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
@@ -144,9 +144,9 @@ const DigitalPortfolio = () => {
                 </div>
                       </div>
                </div>
-                
+
             </div>
-            
+
         </section>
     );
 };
