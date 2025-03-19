@@ -1,5 +1,5 @@
-import digital1 from '../../../public/assets/herat.webp';
-import digital2 from '../../../public/assets/smart solution.webp'
+const digital1 = '/assets/herat.webp';
+const digital2 = '/assets/smart solution.webp'
 const DigitalLocation = () => {
     return (
         <div className="mx-auto py-30 bg-[#0e0e0e] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">

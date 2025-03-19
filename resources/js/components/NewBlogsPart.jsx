@@ -1,5 +1,5 @@
-import NewImage1 from '../../../public/assets/NewBlock1.webp';
-import NewImage2 from '../../../public/assets/NewBlock2.webp';
+const NewImage1 = '/assets/NewBlock1.webp';
+const NewImage2 = '/assets/NewBlock2.webp';
 
 const NewBlogsPart = () => {
     return (
