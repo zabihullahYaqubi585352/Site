@@ -2,7 +2,7 @@ const logo = '/assets/alkharazmi_heroLogo_100.webp';
 const Header = () => {
     return (
 
-         <div className=" bg-red-300 w-full  ">
+         <div className=" w-full  ">
             <div className=" z-[999] w-full border border-b-gray-900 fixed top-0 bg-black ">
                 {' '}
 
@@ -11,6 +11,7 @@ const Header = () => {
                     <div className=' w-[220px]'>
                         <img src={logo} alt=""  />
                     </div>
+                
 
                     <div className="group flex h-[80px] w-[80px] cursor-pointer items-center justify-center rounded-full border border-gray-600 hover:border-[#2baa8d] max-sm:h-[60px] max-sm:w-[60px]">
                         <button className="h-[16px] w-[16px] rounded-full border-2 border-gray-600 bg-[#414141] group-hover:bg-[#2baa8d]"></button>

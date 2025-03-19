@@ -8,6 +8,7 @@ import Legends from '../components/Legends';
 import NewBlogsPart from '../components/NewBlogsPart';
 import SliderPart from '../components/SliderPart';
 import Suporters from '../components/Suporters';
+import  Language  from '../components/Language';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <ExpanIdea />
             <SliderPart />
             <NewBlogsPart />
+            <Language  />
             <Suporters />
             <Footer />
         </div>

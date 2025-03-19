@@ -107,6 +107,7 @@ const Banar = () => {
 
                 </div>
             </div>
+            
         </div>
     );
 };
