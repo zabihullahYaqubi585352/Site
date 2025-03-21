@@ -1,5 +1,4 @@
 const logo = '/assets/alkharazmi_heroLogo_100.webp';
-const bg = "/assets/Footerbg.webp";
 const Footer = () => {
     return (
         <div className="scrollbar-webkit relative mt-20 grid w-full grid-cols-1 gap-10 bg-[#0e0e0e]">
