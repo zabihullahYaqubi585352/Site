@@ -149,7 +149,7 @@ const SliderPart = () => {
             <img
               decoding="async"
               src={SliderContent[current].url}
-              alt="Image"
+              alt="testomnal Image"
             ></img>
           </div>
           <div className="flex flex-col col-span-2 gap-4 ">

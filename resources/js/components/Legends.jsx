@@ -6,7 +6,7 @@ const AhmadShah = '/assets/LegendPhotos/ahmadShah.webp';
 const Arsalan = '/assets/LegendPhotos/arsalan.webp';
 const Ehsan = '/assets/LegendPhotos/ehsan.webp';
 const Hamid = '/assets/LegendPhotos/hamid.webp';
-const Ostadkhalid = '/assets/LegendPhotos/khaled.webp';
+const khalid = '/assets/LegendPhotos/khaled.webp';
 const Mostafa = '/assets/LegendPhotos/mostafa.webp';
 const Nasim = '/assets/LegendPhotos/nasim.webp';
 const Sebghat = '/assets/LegendPhotos/sebghat.webp';
@@ -23,17 +23,17 @@ const zabihGif = '/assets/cpmpressed/Zabih.gif';
 
 const SlideContents = [
     {
-        name: 'ostadNasim ',
+        name: 'Nasim ',
         image: Nasim,
         Gif: NasimGif,
-        level: 'fullStack Developer',
+        level: 'Full-Stack Developer',
     },
 
     {
         name: 'Mostafa',
         Gif: MostafaGif,
         image: Mostafa,
-        level: 'fullStack Developer',
+        level: 'Full-Stack Developer',
     },
     {
         name: 'Zabihullah',
@@ -67,7 +67,7 @@ const SlideContents = [
     },
     {
         name: 'khalid',
-        image: Ostadkhalid,
+        image: khalid,
         level: 'Managing Director',
         Gif: '',
     },
@@ -144,15 +144,17 @@ const Legends = () => {
                             <div className="group relative rounded-t-xl">
                                 <img
                                     src={x.image}
+                                    alt="Legends"
                                     className="full h-[300px] w-[350px] object-cover transition-opacity duration-300 group-hover:opacity-0"
                                 />
 
                                 <img
                                     src={x.Gif}
+                                    alt="Legends gif"
                                     className="absolute top-0 left-0 hidden h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                                 />
                             </div>
-                            <div className="flex flex-col items-center justify-center bg-[#2baa8d] p-4">
+                            <div className="  flex flex-col items-center justify-center bg-[#2baa8d] p-2">
                                 <h4 className="text-xl font-semibold">{x.name}</h4>
                                 <p className="mb-t text-lg font-semibold">{x.level}</p>
                             </div>

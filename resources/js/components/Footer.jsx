@@ -1,14 +1,15 @@
 const logo = '/assets/alkharazmi_heroLogo_100.webp';
+const bg = "/assets/Footerbg.webp";
 const Footer = () => {
     return (
         <div className="scrollbar-webkit relative mt-20 grid w-full grid-cols-1 gap-10 bg-[#0e0e0e]">
-            <div className="w-full bg-[url(https://gossip-themes.com/xpovio/wp-content/themes/xpovio/assets/images/footer-bg.png)] py-10">
+            <div className="w-full bg-[url('/assets/footer.webp')] py-10">
                 <div className=" sm: mx-auto grid max-w-[500px] grid-cols-1 gap-8 px-10 py-10 md:max-w-[800px] lg:max-w-[1000px] lg:grid-cols-5 xl:max-w-[1200px] 2xl:max-w-[1440px]">
                     <div className=" col-span-2 max-w-[690px] py-2">
                         <div>
                             {' '}
                             <div className="hover:cursor-pointer w-[300px]">
-                                <img src={logo} className="object-cover" />
+                                <img src={logo} className="object-cover" alt="footer Image" />
                             </div>{' '}
                         </div>
                         <div className=" mt-6 flex flex-col item-between gap-4">

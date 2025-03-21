@@ -91,7 +91,7 @@ const Banar = () => {
                 </div>
 
 
-                <img src={star} alt="" className="absolute top-[150px] left-[150px] -z-[1] block rounded-full object-cover sm:top-[220px] max-sm:left-[100px] lg:top-[260px]" />
+                <img src={star} alt="start" className="absolute top-[150px] left-[150px] -z-[1] block rounded-full object-cover sm:top-[220px] max-sm:left-[100px] lg:top-[260px]" />
                 <div className="group absolute bottom-[350px] -left-[150px] hidden -rotate-90 items-center gap-[24px] xl:flex">
                     <a href="" className="text-[14px] text-gray-500 uppercase group-hover:text-[#2baa8d]">
                         mail : alkharazmi.soft@gmail.com

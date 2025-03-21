@@ -9,7 +9,7 @@ const Header = () => {
                 {/* px-4 absolute   use insted h-[120px] flex justify-center items-center  fixed top-0   */}
                 <div className="  h-[120px] mx-auto flex w-full items-center justify-between hover:cursor-pointer max-w-[500px] px-4 py-10 md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px] ">
                     <div className=' w-[220px]'>
-                        <img src={logo} alt=""  />
+                        <img src={logo} alt="about logo"  />
                     </div>
                 
 

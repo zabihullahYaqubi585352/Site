@@ -108,7 +108,7 @@ const ExpanIdea = () => {
           </div>
           <div className=" max-w-full flex justify-between items-start  ">
             <h1 className=" font-bold text-gray-800 2xl:text-6xl xl:text-5xl  lg:text-4xl md:text-3xl max-sm:text-3xl group-hover:text-[#2baa8d] ">
-              Web Aplications
+              Web ApPlications
             </h1>
             <div>
               {" "}
