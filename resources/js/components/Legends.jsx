@@ -23,62 +23,62 @@ const zabihGif = '/assets/cpmpressed/Zabih.gif';
 
 const SlideContents = [
     {
-        name: 'Nasim ',
+        name: 'Nasim Abdullah',
         image: Nasim,
         Gif: NasimGif,
         level: 'Full-Stack Developer',
     },
 
     {
-        name: 'Mostafa',
+        name: 'Mostafa Shakibani',
         Gif: MostafaGif,
         image: Mostafa,
         level: 'Full-Stack Developer',
     },
     {
-        name: 'Zabihullah',
+        name: 'Zabihullah Yaqubi',
         Gif: zabihGif,
         image: zabihullah,
         level: 'Fronted Developer',
     },
     {
-        name: 'Hamid',
+        name: 'Hamid Faquiri',
         image: Hamid,
         Gif: HamidGif,
         level: 'Backend Developer',
     },
     {
-        name: 'Razeq',
+        name: 'Razeq Quarishi',
         Gif: RazeqGif,
         image: Razeq,
         level: 'Frontend Developer',
     },
     {
-        name: 'Arsalan',
+        name: 'Arsalan Asefi',
         image: Arsalan,
         level: 'Frontend Developer-Dsigner',
         Gif: ArsalanGif,
     },
     {
-        name: 'Ehsan',
+        name: 'Ehsan Haidary',
         image: Ehsan,
         level: 'Frontend Developer',
         Gif: EhsanGif,
     },
     {
-        name: 'khalid',
+        name: 'Ahmad khalid Behmanish',
         image: khalid,
         level: 'Managing Director',
         Gif: '',
     },
     {
-        name: 'AhmadShah',
+        name: 'Ahmad Shah',
         image: AhmadShah,
         level: 'Frontend Developer-Designer',
         Gif: AhmadShahGif,
     },
     {
-        name: 'Sebghat',
+        name: 'Sebghat Amin',
         image: Sebghat,
         level: 'Frontend Developer',
         Gif: SebghatGif,
