@@ -42,7 +42,7 @@ const SlideContents = [
         level: 'Fronted Developer',
     },
     {
-        name: 'Hamid Faquiri',
+        name: 'Hamid Faqiri',
         image: Hamid,
         Gif: HamidGif,
         level: 'Backend Developer',
