@@ -106,7 +106,7 @@ const DigitalPortfolio = () => {
                         <>
                             <div className="group relative z-10 overflow-hidden before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]">
                                 <a className="w-full cursor-pointer">
-                                    <img src={e.img} alt="" className="h-[450px] w-full object-cover" />
+                                    <img src={e.img} alt="About porfolio" className="h-[450px] w-full object-cover" />
                                 </a>
 
                                 <div className="group-hover: transitionY absolute top-0 right-0 z-1 hidden h-[250px] w-[250px] max-w-[90%] flex-col justify-start bg-white group-hover:flex group-hover:transition-opacity">
@@ -124,10 +124,10 @@ const DigitalPortfolio = () => {
                         </>
                     ))}
                     <div className="grid h-[450px] grid-cols-1 border border-[#2baa8d]">
-                <div className="flex h-[150px] items-start justify-start py-10 pl-10">
+                <div className="  flex h-[150px] items-start justify-start py-10 pl-10">
                     <img
                         src="https://gossip-themes.com/xpovio/wp-content/themes/xpovio/assets/images/portfolio-dot.png"
-                        alt="Image"
+                        alt="dot image"
                         className="h-[100px] w-[100px]"
                     />
                 </div>
@@ -138,7 +138,7 @@ const DigitalPortfolio = () => {
                     </svg>{' '}
                     <img
                         src="https://gossip-themes.com/xpovio/wp-content/themes/xpovio/assets/images/portfolio-dot.png"
-                        alt="Image"
+                        alt="dot image"
                         className="h-[100px] w-[100px]"
                     />
                 </div>

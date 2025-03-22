@@ -5,11 +5,11 @@ const DigitalLocation = () => {
         <div className="mx-auto py-30 bg-[#0e0e0e] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className= "  mx-10 grid h-auto grid-cols-2 gap-10  max-lg:grid-cols-1">
                 <div className="relative max-w-[80%] py-32 max-md:h-[550px] max-sm:h-[550px] sm:h-[500px] md:h-[750px]">
-                    <img src={digital1} alt="" className="left[0px] absolute top-0 z-0 object-cover" />
+                    <img src={digital1} alt="About digitalLocation" className="left[0px] absolute top-0 z-0 object-cover" />
 
                     <img
                         src={digital2}
-                        alt=""
+                        alt="About digitalLocation"
                         className="absolute left-[250px] z-10 px-4 max-sm:left-[100px] sm:left-[100px] md:left-[200px] lg:left-[100px] xl:left-[100px] 2xl:left-[200px]"
                     />
                 </div>
@@ -26,7 +26,7 @@ const DigitalLocation = () => {
 
                     <div className="w-full">
                         <h1 className="w-[90%] text-3xl  leading-tight font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
-                        we are a web development group based in <span className='text-[#2baa8d]'> Heart</span>
+                        We are a web development group based in <span className='text-[#2baa8d]'> Herat</span>
                         </h1>
                     </div>
                     <div className="ml-[15px]">
@@ -39,7 +39,7 @@ const DigitalLocation = () => {
                     <div className="grid w-full grid-cols-1">
                     <div className="py-6">
                             <div className="flex w-[95%] items-center justify-between">
-                                <span className="ml-[10px] text-lg text-white">Web Aplication</span>
+                                <span className="ml-[10px] text-lg text-white">Web Application</span>
                                 <span className="text-lg text-white">95%</span>
                             </div>
                             <div className="mx-2 mt-2 flex h-[7px] items-center justify-between rounded-lg bg-gray-500">
@@ -48,7 +48,7 @@ const DigitalLocation = () => {
                         </div>
                         <div className="py-6">
                             <div className="flex w-[90%] items-center justify-between">
-                                <span className="ml-[10px] text-lg text-white">Website design</span>
+                                <span className="ml-[10px] text-lg text-white">Website Design</span>
                                 <span className="text-lg text-white">90%</span>
                             </div>
                             <div className="mx-2 mt-2 flex h-[7px] items-center justify-between rounded-lg bg-gray-500">

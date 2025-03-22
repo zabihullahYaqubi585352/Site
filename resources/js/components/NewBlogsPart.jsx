@@ -22,7 +22,7 @@ const NewBlogsPart = () => {
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
                 <div className="grid grid-cols-1 gap-8">
                     <div className="mx-4">
-                        <img src={NewImage1} alt="" />
+                        <img src={NewImage1} alt="blogs" />
                     </div>
 
                     <div className="mx-4">
@@ -43,7 +43,7 @@ const NewBlogsPart = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-8">
                     <div className="mx-4">
-                        <img src={NewImage2} alt="" />
+                        <img src={NewImage2} alt="blogs" />
                     </div>
 
                     <div className="mx-4">
