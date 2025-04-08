@@ -144,7 +144,7 @@ const Legends = () => {
                             <div className="group relative rounded-t-xl">
                                 <img
                                     src={x.image}
-                                    alt="Legends"
+                                    alt="Legends photo"
                                     className="full h-[300px] w-[350px] object-cover transition-opacity duration-300 group-hover:opacity-0"
                                 />
 

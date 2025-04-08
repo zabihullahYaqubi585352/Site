@@ -46,6 +46,7 @@ const ExpanIdea = () => {
       </div>
       <img
         decoding="async"
+        alt="About ExpanIdea"
         src="https://gossip-themes.com/xpovio/wp-content/themes/xpovio/assets/images/offer-star.png"
         className="bottom-[20%] left-[40%] z-0 absolute"
       />
