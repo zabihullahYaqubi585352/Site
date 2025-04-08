@@ -116,7 +116,7 @@ const Footer = () => {
                         <span className="mx-1 hover:text-[#2baa8d]">Elegant-Themes</span>. All Rights Reserved.
                     </div>
                     <div className="mx-4 flex items-center gap-2">
-                        <a  className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
+                        <a href=""  className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512">
                                 <path
                                     fill="#f4f5f5"
