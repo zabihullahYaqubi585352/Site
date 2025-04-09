@@ -2,7 +2,7 @@ const star = '/assets/star.webp';
 import '../../css/TextStroke.css';
 const Banar = () => {
     return (
-        <div className="sm: relative z-[1] mx-auto max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+        <div className=" w-full sm:relative z-[1] mx-auto max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="absolute -z-[3] hidden h-full w-full items-center justify-around gap-4 lg:flex">
                 <div className="h-full w-[1px] bg-gray-900"></div>
                 <div className="h-full w-[1px] bg-gray-900"></div>
@@ -41,7 +41,7 @@ const Banar = () => {
                             <div className="relative inline-block">e</div>
                         </div>
                     </span>
-                    <span class="  flex items-center max-sm:ml-4 max-sm:gap-4 sm:gap-10 ml-10  ">
+                    <span className="flex items-center max-sm:ml-4 max-sm:gap-4 sm:gap-10 ml-10  ">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="40px"
@@ -74,18 +74,18 @@ const Banar = () => {
                     </span>
                 </h1>
 
-                <div class=" w-[450px] lg:mx-20 mx-4 mt-[100px] max-w-[550px] text-star">
+                <div className=" lg:mx-20 mx-4 mt-[100px] max-w-[550px] text-star ">
                     <p className="text-lg  text-white">
                     At Al-Kharazmi, we specialize in crafting exceptional web development, creative graphic design, and advanced web applications. As a full-service digital agency, we bring brands to life with captivating designs, powerful applications, and marketing strategies that drive growth and engagement.
                     </p>
-                    <div class="mt-[60px] flex max-w-[400px] justify-between gap-[40px] max-sm:flex-col">
+                    <div className="mt-[60px] flex max-w-[400px] justify-between gap-[40px] max-sm:flex-col">
                         <div className="flex flex-col items-start">
                             <h5 className="text-4xl text-[#2baa8d]">8+ </h5>
-                            <p class="text-xl text-gray-500">Years Of Experience</p>
+                            <p className="text-xl text-gray-500">Years Of Experience</p>
                         </div>
                         <div className="flex flex-col items-start">
                             <h5 className="text-4xl text-[#2baa8d]">25 </h5>
-                            <p class="text-xl text-gray-500">Completed Projects</p>
+                            <p className="text-xl text-gray-500">Completed Projects</p>
                         </div>
                     </div>
                 </div>
