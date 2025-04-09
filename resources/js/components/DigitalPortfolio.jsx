@@ -105,7 +105,7 @@ const DigitalPortfolio = () => {
                     {portfolios?.map((e, i) => (
                         <>
                             <div className="group relative z-10 overflow-hidden before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]">
-                                <a className="w-full cursor-pointer">
+                                <a  href='' className="w-full cursor-pointer">
                                     <img src={e.img} alt="About porfolio" className="h-[450px] w-full object-cover" />
                                 </a>
 

@@ -4,6 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Creative web developer specializing in React and Laravel. Explore my portfolio and get in touch for your next project.">
+
       
         <link rel="icon"  href="{{ asset('TitleBar.webp') }}">
          <title>Al-kharazmi</title> 
