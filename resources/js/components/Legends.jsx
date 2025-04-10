@@ -139,12 +139,12 @@ const Legends = () => {
             </div>
             <div className="mb-20">
                 <Slider {...settings} className="flex">
-                    {SlideContents.map((x) => (
-                        <div className="slick-slider h-[450px] rounded-xl text-white">
+                    {SlideContents.map((x, i) => (
+                        <div key={i} className="slick-slider h-[450px] rounded-xl text-white">
                             <div className="group relative rounded-t-xl">
                                 <img
                                     src={x.image}
-                                    alt="Legends"
+                                    alt="Legends photo"
                                     className="full h-[300px] w-[350px] object-cover transition-opacity duration-300 group-hover:opacity-0"
                                 />
 
