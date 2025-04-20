@@ -1,6 +1,49 @@
 {
-    "welcome": "Welcome to our website!",
-    "description": "This is a multi-language website using TailwindCSS and i18n."
-  
- 
-    }
+    "completedProjects": "Completed Projects",
+    "YearsOfExperience": "Years of Experience",
+    "AlKharazmi": "Al-Kharazmi",
+    "AlKharazmiDescription": "At Al-Kharazmi, we specialize in crafting exceptional web development, creative graphic design, and advanced web applications. As a full-service digital agency, we bring brands to life with captivating designs, powerful applications, and marketing strategies that drive growth and engagement.",
+    "A": "A",
+    "Creative": "Creative",
+    "welcome": "welcome",
+    "location": "We are a web development group based in,Herat ",
+    "webApplications": "Web Applications",
+    "graphicDesign": "Graphic Design",
+    "Website Design": "Website Design",
+    "knowmore": "KNOE MORE",
+    "digital": " DIGITAL PORTFOLIO",
+    "portfolio": {
+        "transport": "Transport",
+        "octane": "Octane",
+        "nanonet": "Nanonet",
+        "metal": "Metal",
+        "abacus": "Abacus",
+        "adaptix": "Adaptix",
+        "topbook": "TopBook",
+        "afghanSharq": "Afghan Sharq"
+    },
+    "viewAllWork": "View All Work",
+    "ourTeam": "Our Team",
+    "meetTheLegend": "Meet the Legends",
+    "team": {
+        "nasim": "Nasim",
+        "mostafa": "Mostafa",
+        "zabihullah": "Zabihullah",
+        "hamid": "Hamid",
+        "razeq": "Razeq",
+        "arsalan": "Arsalan",
+        "ehsan": "Ehsan",
+        "khalid": "Khalid",
+        "ahmadShah": "Ahmad Shah",
+        "sebghat": "Sebghat",
+        "waliAhmad": "waliAhmad"
+    },
+    "roles": {
+        "fullstack": "Full-Stack Developer",
+        "frontend": "Frontend Developer",
+        "backend": "Backend Developer",
+        "frontendDesigner": "Frontend Developer / Designer",
+        "manager": "Managing Director"
+    },
+    "companyDescription": "Empowering businesses with innovative web development, stunning graphic design, and advanced web applications. We create impactful digital experiences that drive growth and efficiency. By blending creativity with technical expertise, we deliver solutions that set brands apart in an ever-evolving digital landscape."
+}
