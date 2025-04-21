@@ -57,7 +57,7 @@ const Banar = () => {
                         </svg>
 
                         <div className="relative inline-block">
-                            <div className="relative inline-block">Digital</div>
+                            <div className="relative inline-block">{t('Digital')}</div>
                             {/* <div className="relative inline-block">i</div>
                             <div className="relative inline-block">g</div>
                             <div className="relative inline-block">i</div>
@@ -66,7 +66,7 @@ const Banar = () => {
                             <div className="relative inline-block">l</div> */}
                         </div>
                         <div className="relative inline-block">
-                            <div className="relative inline-block">Ageency</div>
+                            <div className="relative inline-block">{t('Ageency')}</div>
                             {/* <div className="relative inline-block">g</div>
                             <div className="relative inline-block">e</div>
                             <div className="relative inline-block">e</div>

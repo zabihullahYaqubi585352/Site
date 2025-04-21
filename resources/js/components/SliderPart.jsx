@@ -1,43 +1,48 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './TextStroke.css';
+import './i18n';
 const framarz = '/assets/testimonials/framarz.webp';
 const mobin = '/assets/testimonials/mobin.webp';
 const rahmani = '/assets/testimonials/rahmani.webp';
 
 const SliderPart = () => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const testimonials = t('testimonials', { returnObjects: true });
     const isRTL = i18n.dir() === 'rtl';
-    const SliderContent = [
-        {
-            url: framarz,
-            text: "As a leading importer of large vehicles, faced management challenges in finance and logistics. The implementation of the Transport ERP system in the company's accounting program brought about significant transformation. This system integrated all processes. It improved team productivity, enabled better profit and loss analysis. Additionally, the system's diverse functionalities and strong support from the development team.",
-            name: 'Faramarz Fayzi',
-            level: 'Financial Manager',
-            location: ' Munib Soheib Khatibi Company',
-        },
+    const imageList = [framarz, mobin, rahmani];
+    if (!Array.isArray(testimonials)) {
+        testimonials = [
+            {
+                url: framarz,
+                text: "As a leading importer of large vehicles, faced management challenges in finance and logistics. The implementation of the Transport ERP system in the company's accounting program brought about significant transformation. This system integrated all processes. It improved team productivity, enabled better profit and loss analysis. Additionally, the system's diverse functionalities and strong support from the development team.",
+                name: 'Faramarz Fayzi',
+                level: 'Financial Manager',
+                location: ' Munib Soheib Khatibi Company',
+            },
 
-        {
-            url: mobin,
-            text: 'Working with Al-Kharazmi Company was a great experience. They created an easy-to-use and reliable accounting system that perfectly fits our needs. It has improved our efficiency, saved us time, and made managing our finances much easier. Their team was professional, helpful, and always available to answer questions. We highly recommend them to anyone looking for a good accounting software solution.',
-            name: 'Mobin Siddiqui',
-            level: ' CEO',
-            location: 'Anardarah Petroleum Company',
-        },
+            {
+                url: mobin,
+                text: 'Working with Al-Kharazmi Company was a great experience. They created an easy-to-use and reliable accounting system that perfectly fits our needs. It has improved our efficiency, saved us time, and made managing our finances much easier. Their team was professional, helpful, and always available to answer questions. We highly recommend them to anyone looking for a good accounting software solution.',
+                name: 'Mobin Siddiqui',
+                level: ' CEO',
+                location: 'Anardarah Petroleum Company',
+            },
 
-        {
-            url: rahmani,
-            text: "  I would like to take this time to appreciate Alkharazmi programming company for their great services and professionalism. Nanonet Educational Academy's website is designed and developed by this brilliant company. My experience as Nanonet manager was really pleasing and productive with Alkharazmi Company in all aspects of the project including price and maintenance. I hope success and betterment for all members Alkharazmi's company. .",
-            name: 'Ebrahim Rahmani',
-            level: ' Manager',
-            location: 'Nano Net Academy',
-        },
-    ];
+            {
+                url: rahmani,
+                text: "  I would like to take this time to appreciate Alkharazmi programming company for their great services and professionalism. Nanonet Educational Academy's website is designed and developed by this brilliant company. My experience as Nanonet manager was really pleasing and productive with Alkharazmi Company in all aspects of the project including price and maintenance. I hope success and betterment for all members Alkharazmi's company. .",
+                name: 'Ebrahim Rahmani',
+                level: ' Manager',
+                location: 'Nano Net Academy',
+            },
+        ];
+    }
 
     const [current, setCurrent] = useState(0);
-    const prevSlide = () => setCurrent((current) => (current == 0 ? SliderContent.length - 1 : current - 1));
+    const prevSlide = () => setCurrent((current) => (current == 0 ? testimonials.length - 1 : current - 1));
 
-    const nextSlide = () => setCurrent((current) => (current == SliderContent.length - 1 ? 0 : current + 1));
+    const nextSlide = () => setCurrent((current) => (current == testimonials.length - 1 ? 0 : current + 1));
 
     return (
         <section className="sm: mx-auto max-w-[500px] overflow-x-hidden px-10 py-10 md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
@@ -117,7 +122,7 @@ const SliderPart = () => {
             <div className="flex flex-col gap-8 py-20 2xl:flex-row">
                 <div className="grid max-w-[1200px] grid-cols-3 gap-8 max-lg:grid-cols-1">
                     <div className="mx-4 flex items-center justify-start">
-                        <img decoding="async" src={SliderContent[current].url} alt="testomnal Image"></img>
+                        <img src={imageList[current]} alt="testimonial" />
                     </div>
                     <div className="col-span-2 flex flex-col gap-4">
                         <div className="mx-4">
@@ -130,12 +135,12 @@ const SliderPart = () => {
                         </div>
 
                         <div className="mx-4">
-                            <h4 className="mx-3 text-xl text-white">{SliderContent[current].text}</h4>
+                            <h4 className="mx-3 text-xl text-white">{testimonials[current].text}</h4>
                         </div>
                         <div className="mx-4">
-                            <h5 className="mx-3 pb-4 text-2xl text-white">{SliderContent[current].name}</h5>
-                            <p className="mx-3 text-xl text-white">{SliderContent[current].level}</p>
-                            <p className="mx-3 text-xl text-white">{SliderContent[current].location}</p>
+                            <h5 className="mx-3 pb-4 text-2xl text-white">{testimonials[current].name}</h5>
+                            <p className="mx-3 text-xl text-white">{testimonials[current].level}</p>
+                            <p className="mx-3 text-xl text-white">{testimonials[current].location}</p>
                         </div>
                     </div>
                 </div>

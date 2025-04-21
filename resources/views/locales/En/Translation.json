@@ -5,6 +5,8 @@
     "AlKharazmiDescription": "At Al-Kharazmi, we specialize in crafting exceptional web development, creative graphic design, and advanced web applications. As a full-service digital agency, we bring brands to life with captivating designs, powerful applications, and marketing strategies that drive growth and engagement.",
     "A": "A",
     "Creative": "Creative",
+    "Digital": "Digital",
+    "Ageency": "Agency",
     "welcome": "welcome",
     "location": "We are a web development group based in,Herat ",
     "webApplications": "Web Applications",
@@ -45,5 +47,39 @@
         "frontendDesigner": "Frontend Developer / Designer",
         "manager": "Managing Director"
     },
-    "companyDescription": "Empowering businesses with innovative web development, stunning graphic design, and advanced web applications. We create impactful digital experiences that drive growth and efficiency. By blending creativity with technical expertise, we deliver solutions that set brands apart in an ever-evolving digital landscape."
+    "whatWeOffer": "What We Offer",
+    "SystemDescription": " Building Tomorrow’s Technology from today’s vision  ",
+    "companyDescription": "At Al-Kharazmi, we don't just build software; we shape the future. Your ideas become the foundation of tomorrow's technology, as we blend innovation, creativity, and technical expertise to craft solutions that push boundaries. Together, let's turn your vision into digital experiences that inspire and lead the way forward.",
+    "viewAllServices": "VIEW ALL SERVICES",
+    "WebApplications": "Web Applications",
+    "AccountingSystems": "Accounting Systems",
+    "GraphicDesigns": "Graphic Designs",
+    "HostingServices": "Hosting Services",
+    "testimonials": [
+        {
+            "text": "As a leading importer of large vehicles, faced management challenges in finance and logistics. The implementation of the Transport ERP system in the company's accounting program brought about significant transformation. This system integrated all processes. It improved team productivity, enabled better profit and loss analysis. Additionally, the system's diverse functionalities and strong support from the development team.",
+            "name": "Faramarz Fayzi",
+            "level": "Financial Manager",
+            "location": "Munib Soheib Khatibi Company"
+        },
+
+        {
+            "text": "I would like to take this time to appreciate Alkharazmi programming company...",
+            "name": "Ebrahim Rahmani",
+            "level": "Manager",
+            "location": "Nano Net Academy"
+        },
+        {
+            "text": "Working with Al-Kharazmi Company was a great experience. They created an easy-to-use and reliable accounting system that perfectly fits our needs. It has improved our efficiency, saved us time, and made managing our finances much easier. Their team was professional, helpful, and always available to answer questions. We highly recommend them to anyone looking for a good accounting software solution.",
+            "name": "Mobin Siddiqui",
+            "level": "CEO",
+            "location": "Anardarah Petroleum Company"
+        }
+    ],
+    "NewsAndBlog": "News & Blog",
+    "WhatNewInBlog": "What’s New in Blog",
+    "10ContentProofreadingTipsToCatchAvoidableGoofs": "10 Content Proofreading Tips to Catch Avoidable Goofs",
+    "DataSecureOnTransitioningToANewOffice": "Data Secure on Transitioning to a New Office",
+    "DGITAL": "Digital",
+    "Modern": "Modern"
 }
