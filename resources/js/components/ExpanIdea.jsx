@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import './i18n';
 const ExpanIdea = () => {
     const { t, i18n } = useTranslation();
@@ -17,7 +17,8 @@ const ExpanIdea = () => {
                 <div className="max-w-full py-4">
                     <h1 className="w-[90%] text-6xl font-bold text-white sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-6xl 2xl:leading-tight">
                         {/* Building <span className="text-[#2baa8d]">Tomorrow’s </span>Technology from today’s vision */}
-                        {t('SystemDescription')}
+
+                        <Trans i18nKey="SystemDescription" components={{ 1: <span className="text-[#2baa8d]" /> }} />
                     </h1>
                 </div>
 

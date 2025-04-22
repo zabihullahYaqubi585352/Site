@@ -8,11 +8,11 @@
     "Digital": "Digital",
     "Ageency": "Agency",
     "welcome": "welcome",
-    "location": "We are a web development group based in,Herat ",
+    "location": "We are a web development group based in <1>Herat</1>.",
     "webApplications": "Web Applications",
     "graphicDesign": "Graphic Design",
     "Website Design": "Website Design",
-    "knowmore": "KNOE MORE",
+    "knowmore": "Know More",
     "digital": " DIGITAL PORTFOLIO",
     "portfolio": {
         "transport": "Transport",
@@ -48,7 +48,7 @@
         "manager": "Managing Director"
     },
     "whatWeOffer": "What We Offer",
-    "SystemDescription": " Building Tomorrow’s Technology from today’s vision  ",
+    "SystemDescription": " Building  <1>Tomorrow’s</1> Technology from today’s vision ",
     "companyDescription": "At Al-Kharazmi, we don't just build software; we shape the future. Your ideas become the foundation of tomorrow's technology, as we blend innovation, creativity, and technical expertise to craft solutions that push boundaries. Together, let's turn your vision into digital experiences that inspire and lead the way forward.",
     "viewAllServices": "VIEW ALL SERVICES",
     "WebApplications": "Web Applications",

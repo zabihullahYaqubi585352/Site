@@ -12,7 +12,7 @@ import './i18n';
 
 const DigitalPortfolio = () => {
     const { t, i18n } = useTranslation();
-    const isRTL = i18n.dir() === 'ltr';
+    const isRTL = i18n.dir() === 'rtl';
     const portfolios = [
         { img: one, titleKey: 'portfolio.transport' },
         { img: tow, titleKey: 'portfolio.octane' },
@@ -25,9 +25,9 @@ const DigitalPortfolio = () => {
     ];
     return (
         <section className="sm: relative mx-auto mb-[40px] block max-w-[500px] px-10 py-[100px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-            <div className="sm: relative mx-auto mb-[40px] block max-w-[500px] overflow-hidden md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+            <div className="sm: relative mx-auto mb-[40px] block max-w-[500px] overflow-hidden bg-red-400 md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
                 <div className="w-[10000px]">
-                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool'}`}>
+                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool-left-to-right'}`}>
                         <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
                             <a href="" className="inline-flex items-center gap-[8px] outline-0">
                                 {t('degital')}
@@ -44,7 +44,7 @@ const DigitalPortfolio = () => {
                             </svg>
                         </h2>
                     </div>
-                    <div className={`group float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool'}`}>
+                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool-left-to-right'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
                             <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
                                 {t('degital')}
@@ -61,7 +61,7 @@ const DigitalPortfolio = () => {
                             </svg>
                         </h2>
                     </div>
-                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool'}`}>
+                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool-left-to-right'}`}>
                         <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
                             <a href="" className="inline-flex items-center gap-[8px] outline-0">
                                 {t('degital')}
@@ -78,7 +78,7 @@ const DigitalPortfolio = () => {
                             </svg>
                         </h2>
                     </div>
-                    <div className={`group float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool'}`}>
+                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-right-to-left' : 'loop-scrool-left-to-right'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
                             <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
                                 {t('degital')}

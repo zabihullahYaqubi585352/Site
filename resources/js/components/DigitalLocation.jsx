@@ -1,11 +1,12 @@
 const digital1 = '/assets/herat.webp';
 const digital2 = '/assets/smart solution.webp';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import '../../css/TextStroke.css';
 import './i18n';
 
 const DigitalLocation = () => {
     const { t, i18n } = useTranslation();
+    const dir = i18n.dir();
     return (
         <div className="mx-auto bg-[#0e0e0e] py-30 sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="mx-10 grid h-auto grid-cols-2 gap-10 max-lg:grid-cols-1">
@@ -15,7 +16,8 @@ const DigitalLocation = () => {
                     <img
                         src={digital2}
                         alt="About digitalLocation"
-                        className="absolute left-[250px] z-10 px-4 max-sm:left-[100px] sm:left-[100px] md:left-[200px] lg:left-[100px] xl:left-[100px] 2xl:left-[200px]"
+                        className={`absolute z-10 px-4 ${dir === 'rtl' ? 'right-[150px]' : 'left-[150px]'} max-sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} md:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'} lg:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} xl:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} 2xl:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'}`}
+                        // className="absolute left-[250px] z-10 px-4 max-sm:left-[100px] sm:left-[100px] md:left-[200px] lg:left-[100px] xl:left-[100px] 2xl:left-[200px]"
                     />
                 </div>
                 <div className="grid h-auto grid-cols-1 gap-6 px-4">
@@ -31,7 +33,7 @@ const DigitalLocation = () => {
 
                     <div className="w-full">
                         <h1 className="w-[90%] text-3xl leading-tight font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
-                            {t('location')}
+                            <Trans i18nKey="location" components={{ 1: <span className="text-[#2baa8d]" /> }} />
 
                             {/* We are a web developmednt group based in <span className='text-[#2baa8d]'> Herat</span> */}
                         </h1>
@@ -74,9 +76,11 @@ const DigitalLocation = () => {
                                 <div className="h-[7px] w-[90%] rounded-lg bg-white"></div>
                             </div>
                         </div>
-                        <div className="mt-10 ml-[15px] flex h-[60px] w-[180px] justify-center gap-2 rounded-full border border-[#2baa8d] hover:bg-[#2baa8d]">
+                        <div className="group mt-10 ml-[15px] flex h-[60px] w-[180px] justify-center gap-2 rounded-full border border-[#2baa8d] hover:bg-[#2baa8d]">
                             {' '}
-                            <div className="flex items-center justify-center text-lg text-[#2baa8d] hover:text-black">{t('knowMore')}</div>
+                            <div className="hover:text-blac flex items-center justify-center text-lg text-[#2baa8d] uppercase group-hover:text-black">
+                                {t('knowmore')}
+                            </div>
                         </div>
                     </div>
                 </div>
