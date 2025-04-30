@@ -17,7 +17,7 @@ const Footer = () => {
                         </div>
                         <div className="item-between mt-6 flex flex-col gap-4">
                             <div className="group flex flex-col">
-                                <div className="text-md flex items-center gap-2 text-white group-hover:text-[#2baa8d]">
+                                <div className="text-md flex cursor-pointer items-center gap-2 text-white group-hover:text-[#2baa8d]">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         height="20px"
@@ -28,7 +28,7 @@ const Footer = () => {
                                     >
                                         <path d="M0 0h24v24H0V0z" fill="none" />
                                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
-                                        <circle cx="12" cy="9" r="2.5" />
+                                        <circle cx="12" cy="9" r="2.5 " />
                                     </svg>
                                     {t('Address')}
                                 </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                                         </svg>{' '}
                                     </div>
 
-                                    <div className="flex flex-nowrap group-hover:text-[#2baa8d]">(+93) 797658636</div>
+                                    <div className="flex cursor-pointer flex-nowrap group-hover:text-[#2baa8d]">(+93) 797658636</div>
                                 </div>
                                 <div className="group text-md flex items-center justify-center gap-2 text-white">
                                     <svg
@@ -65,37 +65,39 @@ const Footer = () => {
                                         <path d="M202.28-248.5q-20.92 0-35.1-14.19Q153-276.89 153-297.84v-364.64q0-20.96 14.18-34.99 14.18-14.03 35.1-14.03h555.44q20.92 0 35.1 14.19Q807-683.11 807-662.16v364.64q0 20.96-14.18 34.99-14.18 14.03-35.1 14.03H202.28ZM480-480.25 170.5-669.5V-298q0 14 9 23t23 9h555q14 0 23-9t9-23v-371.5L480-480.25Zm0-36.25L773-694H187l293 177.5Zm-309.5-153V-694v396q0 14 9 23t23 9h-32v-403.5Z" />
                                     </svg>
 
-                                    <div className="group-hover:text-[#2baa8d]"> alkharazmi.soft@gmail.com</div>
+                                    <div className="cursor-pointer group-hover:text-[#2baa8d]"> alkharazmi.soft@gmail.com</div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mt-10 flex h-[60px] w-[240px] justify-center rounded-[40px] border border-gray-700 hover:bg-[#2baa8d]">
                             {' '}
-                            <span className="flex items-center justify-center py-4 text-lg font-bold text-gray-100">{t('BOOKACALLNOW')}</span>
+                            <span className="cur flex cursor-pointer items-center justify-center py-4 text-lg font-bold text-gray-100">
+                                {t('BOOKACALLNOW')}
+                            </span>
                         </div>
                     </div>
                     <div className="col-span-1 flex max-w-[690px] flex-col items-start px-[15px] lg:ml-20">
-                        <div className="mb-5 text-2xl text-white"> {t('Discover')}</div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('About')} </div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Blog')} </div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Contact Us')}</div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Careers')}</div>
+                        <div className="mb-5 cursor-pointer text-2xl text-white"> {t('Discover')}</div>
+                        <div className="mb-4 cursor-pointer text-xl text-white hover:text-[#2baa8d]"> {t('About')} </div>
+                        <div className="mb-4 cursor-pointer text-xl text-white hover:text-[#2baa8d]"> {t('Blog')} </div>
+                        <div className="mb-4 cursor-pointer text-xl text-white hover:text-[#2baa8d]"> {t('Contact Us')}</div>
+                        <div className="mb-4 cursor-pointer text-xl text-white hover:text-[#2baa8d]"> {t('Careers')}</div>
                     </div>
                     <div className="col-span-2 flex max-w-[690px] flex-col">
                         <div className=" ">
-                            <h5 className="px-4 pb-4 text-3xl text-white">{t('SubscribeOurNewsletter')}</h5>
+                            <h5 className="cursor-pointer px-4 pb-4 text-3xl text-white">{t('SubscribeOurNewsletter')}</h5>
                         </div>
                         <div className="mb-4">
                             {' '}
-                            <p className="px-4 py-4 text-xl text-white">{t('SubscribeOurNewsletterDescription')}</p>
+                            <p className="cursor-pointer px-4 py-4 text-xl text-white">{t('SubscribeOurNewsletterDescription')}</p>
                         </div>
                         <div className="mx-[20px] flex items-center justify-between rounded-sm border border-gray-500">
-                            <div className="flex w-full items-center justify-between bg-transparent">
+                            <div className="flex w-full cursor-pointer items-center justify-between bg-transparent">
                                 <input
                                     type="email"
                                     placeholder={t('placeholder.email')}
-                                    className="mx-6 w-full bg-transparent py-4 text-lg text-gray-300 outline-none"
+                                    className="mx-6 w-full cursor-pointer bg-transparent py-4 text-lg text-gray-300 outline-none placeholder:text-gray-500 focus:outline-none"
                                 />
 
                                 <svg

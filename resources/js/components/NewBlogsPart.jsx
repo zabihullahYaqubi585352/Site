@@ -9,7 +9,7 @@ const NewBlogsPart = () => {
             <div className="flex flex-col items-center justify-center gap-6 py-10">
                 <div className="flex h-[50px] w-[200px] justify-center gap-2 rounded-3xl border border-gray-700">
                     {' '}
-                    <span className="flex items-center justify-center text-lg text-[#2baa8d]">{t('NewsAndBlog')}</span>
+                    <span className="flex cursor-pointer items-center justify-center text-lg text-[#2baa8d]">{t('NewsAndBlog')}</span>
                     <div className="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#2baa8d">
                             <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />

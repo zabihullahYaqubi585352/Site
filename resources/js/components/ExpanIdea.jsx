@@ -7,7 +7,7 @@ const ExpanIdea = () => {
             <div className="grid grid-cols-1 px-2">
                 <div className="flex h-[50px] w-[220px] justify-center gap-2 rounded-3xl border border-[#2baa8d]">
                     {' '}
-                    <span className="flex items-center justify-center text-lg text-[#2baa8d]">{t('whatWeOffer')}</span>
+                    <span className="flex cursor-pointer items-center justify-center text-lg text-[#2baa8d]">{t('whatWeOffer')}</span>
                     <div className="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#2baa8d">
                             <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />
@@ -33,7 +33,7 @@ const ExpanIdea = () => {
 
                 <div className="mt-8 flex h-[50px] w-[220px] justify-center gap-2 rounded-3xl border border-gray-700 hover:bg-[#2baa8d] sm:mb-2">
                     {' '}
-                    <span className="flex items-center justify-center text-lg text-white uppercase"> {t('viewAllServices')}</span>
+                    <span className="flex cursor-pointer items-center justify-center text-lg text-white uppercase"> {t('viewAllServices')}</span>
                 </div>
                 <div className="h-[100px] w-full py-20 max-lg:hidden"></div>
             </div>
@@ -44,7 +44,7 @@ const ExpanIdea = () => {
                 className="absolute bottom-[20%] left-[40%] z-0"
             />
             <div className="grid grid-cols-1 px-2">
-                <div className="group grid grid-cols-1 gap-4">
+                <div className="group grid cursor-pointer grid-cols-1 gap-4">
                     <div className="flex h-[50px] w-[100px] justify-center gap-2 rounded-3xl border border-gray-800">
                         {' '}
                         <div className="flex items-center justify-center text-lg text-gray-800 group-hover:text-[#2baa8d]">01</div>
@@ -74,7 +74,7 @@ const ExpanIdea = () => {
                     </div>
                 </div>
 
-                <div className="group grid grid-cols-1 gap-4 py-5">
+                <div className="group grid cursor-pointer grid-cols-1 gap-4 py-5">
                     <div className="flex h-[50px] w-[100px] justify-center gap-2 rounded-3xl border border-gray-800">
                         {' '}
                         <div className="flex items-center justify-center text-lg text-gray-800 group-hover:text-[#2baa8d]">02</div>
@@ -104,7 +104,7 @@ const ExpanIdea = () => {
                     </div>
                 </div>
 
-                <div className="group grid grid-cols-1 gap-4 py-5">
+                <div className="group grid cursor-pointer grid-cols-1 gap-4 py-5">
                     <div className="flex h-[50px] w-[100px] justify-center gap-2 rounded-3xl border border-gray-800">
                         {' '}
                         <div className="flex items-center justify-center text-lg text-gray-800 group-hover:text-[#2baa8d]">03</div>
@@ -134,7 +134,7 @@ const ExpanIdea = () => {
                     </div>
                 </div>
 
-                <div className="group grid grid-cols-1 gap-4 py-5">
+                <div className="group grid cursor-pointer grid-cols-1 gap-4 py-5">
                     <div className="flex h-[50px] w-[100px] justify-center gap-2 rounded-3xl border border-gray-800">
                         {' '}
                         <div className="flex items-center justify-center text-lg text-gray-800 group-hover:text-[#2baa8d]">04</div>

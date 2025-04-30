@@ -134,7 +134,7 @@ const Legends = () => {
             <div className="mt-20">
                 <div className="flex h-[50px] w-[220px] justify-center gap-2 rounded-3xl border border-[#2baa8d]">
                     {' '}
-                    <span className="flex items-center justify-center text-xl text-[#2baa8d]">{t('ourTeam')}</span>
+                    <span className="flex cursor-pointer items-center justify-center text-xl text-[#2baa8d]">{t('ourTeam')}</span>
                     <div className="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#2baa8d">
                             <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />

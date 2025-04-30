@@ -12,7 +12,7 @@
     "webApplications": "Web Applications",
     "graphicDesign": "Graphic Design",
     "WebsiteDesign": "Website Design",
-    "knowmore": "Know More",
+    "knowMore": "Know More",
     "PortFolio": "Digital Portfolio",
     "portfolio": {
         "transport": "Transport",
@@ -44,7 +44,7 @@
         "fullstack": "Full-Stack Developer",
         "frontend": "Frontend Developer",
         "backend": "Backend Developer",
-        "frontendDesigner": "Frontend Developer / Designer",
+        "frontendDesigner": "Frontend Developer ",
         "manager": "Managing Director"
     },
     "whatWeOffer": "What We Offer",
@@ -83,10 +83,10 @@
     "DGITAL": "Digital",
     "Modern": "Modern",
     "Address": "Almas-e-sharq-Gulha square - Herat - Afghanistan",
-    "SubscribeOurNewsletter": "Subscribe to Our Newsletter",
+    "SubscribeOurNewsletter": "subscribe to our newsletter",
     "SubscribeOurNewsletterDescription": "Welcome to our digital agency We specialize in helping business most like yours succeed online",
     "placeholder": {
-        "email": "Enter your email"
+        "email": "enter your email"
     },
     "Discover": "Discover",
     "About": "About",

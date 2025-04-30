@@ -78,8 +78,8 @@ const DigitalLocation = () => {
                         </div>
                         <div className="group mt-10 ml-[15px] flex h-[60px] w-[180px] justify-center gap-2 rounded-full border border-[#2baa8d] hover:bg-[#2baa8d]">
                             {' '}
-                            <div className="hover:text-blac flex items-center justify-center text-lg text-[#2baa8d] uppercase group-hover:text-black">
-                                {t('knowmore')}
+                            <div className="flex cursor-pointer items-center justify-center text-lg text-[#2baa8d] uppercase group-hover:text-black hover:text-black">
+                                {t('knowMore')}
                             </div>
                         </div>
                     </div>

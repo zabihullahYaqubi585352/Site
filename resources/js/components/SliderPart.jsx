@@ -148,7 +148,7 @@ const SliderPart = () => {
                 <div className="flex flex-col justify-start gap-8 px-4 py-10 max-2xl:flex-row">
                     <button
                         onClick={prevSlide}
-                        className="group flex h-[90px] w-[90px] -rotate-90 items-center justify-center rounded-full border border-gray-600 hover:bg-[#2baa8d] max-2xl:rotate-0"
+                        className="group flex h-[90px] w-[90px] -rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-600 hover:bg-[#2baa8d] max-2xl:rotate-0"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 320 512">
                             <path
@@ -160,7 +160,7 @@ const SliderPart = () => {
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="group flex h-[90px] w-[90px] rotate-90 items-center justify-center rounded-full border border-gray-600 hover:bg-[#2baa8d] max-2xl:rotate-180"
+                        className="group flex h-[90px] w-[90px] rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-600 hover:bg-[#2baa8d] max-2xl:rotate-180"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 320 512">
                             <path
