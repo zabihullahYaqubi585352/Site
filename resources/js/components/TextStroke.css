@@ -13,7 +13,32 @@
     margin: 0 10px;
 }
 
-@keyframes scroll-right-to-left {
+.loop-scrool-ltr {
+    animation: loop-scroll 60s linear infinite;
+}
+.loop-scrool-rtl {
+    animation: loop-scroll-rtl 20s linear infinite;
+}
+
+@keyframes loop-scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes loop-scroll-rtl {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes loop-image {
     from {
         transform: translateX(0%);
     }
@@ -22,46 +47,8 @@
     }
 }
 
-@keyframes scroll-left-to-right {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
-}
-
-.scroll-rtl {
-    animation: scroll-right-to-left 30s linear infinite;
-}
-
-.scroll-ltr {
-    animation: scroll-left-to-right 30s linear infinite;
-}
-@keyframes loop-image-rtl {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.loop-image-rtl {
-    animation: loop-image-rtl 60s linear infinite;
-}
-
-@keyframes loop-image-ltr {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.loop-image-ltr {
-    animation: loop-image-ltr 60s linear infinite;
+.loop-image {
+    animation: loop-image 60s linear infinite;
 }
 
 @keyframes transitionY {

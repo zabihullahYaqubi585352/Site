@@ -40,7 +40,13 @@ const NewBlogsPart = () => {
                                 </svg>
                             </div>
                         </div>
-                        <span className="text-xl text-gray-500">Feb 17, 2024</span>
+                        <span className="text-xl text-gray-500">
+                            {new Intl.DateTimeFormat(i18n.language, {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            }).format(new Date('2024-02-17'))}
+                        </span>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 gap-8">
@@ -61,7 +67,13 @@ const NewBlogsPart = () => {
                                 </svg>
                             </div>
                         </div>
-                        <span className="text-xl text-gray-500">Feb 17, 2024</span>
+                        <span className="text-xl text-gray-500">
+                            {new Intl.DateTimeFormat(i18n.language, {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            }).format(new Date('2024-09-17'))}
+                        </span>
                     </div>
                 </div>
             </div>

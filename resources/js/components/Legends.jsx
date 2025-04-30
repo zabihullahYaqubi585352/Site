@@ -58,7 +58,7 @@ const SlideContents = [
         level: 'roles.backend',
     },
     {
-        name: 'team.razeq',
+        name: 'team.raziq',
         Gif: RazeqGif,
         image: Razeq,
         level: 'roles.frontend',

@@ -11,9 +11,9 @@
     "location": "We are a web development group based in <1>Herat</1>.",
     "webApplications": "Web Applications",
     "graphicDesign": "Graphic Design",
-    "Website Design": "Website Design",
+    "WebsiteDesign": "Website Design",
     "knowmore": "Know More",
-    "digital": " DIGITAL PORTFOLIO",
+    "PortFolio": "Digital Portfolio",
     "portfolio": {
         "transport": "Transport",
         "octane": "Octane",
@@ -32,7 +32,7 @@
         "mostafa": "Mostafa",
         "zabihullah": "Zabihullah",
         "hamid": "Hamid",
-        "razeq": "Razeq",
+        "raziq": "Raziq",
         "arsalan": "Arsalan",
         "ehsan": "Ehsan",
         "khalid": "Khalid",
@@ -81,5 +81,19 @@
     "10ContentProofreadingTipsToCatchAvoidableGoofs": "10 Content Proofreading Tips to Catch Avoidable Goofs",
     "DataSecureOnTransitioningToANewOffice": "Data Secure on Transitioning to a New Office",
     "DGITAL": "Digital",
-    "Modern": "Modern"
+    "Modern": "Modern",
+    "Address": "Almas-e-sharq-Gulha square - Herat - Afghanistan",
+    "SubscribeOurNewsletter": "Subscribe to Our Newsletter",
+    "SubscribeOurNewsletterDescription": "Welcome to our digital agency We specialize in helping business most like yours succeed online",
+    "placeholder": {
+        "email": "Enter your email"
+    },
+    "Discover": "Discover",
+    "About": "About",
+    "Blog": "Blog",
+    "Contact Us": "Contact Us",
+    "Careers": "Careers",
+    "CopyrightAlKharazmi": "Copyright © 2024 Al-kharazmi by",
+    "AllRightsReserved": "All rights reserved",
+    "BOOKACALLNOW": "BOOK A CALL NOW"
 }

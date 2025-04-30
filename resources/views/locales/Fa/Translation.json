@@ -14,6 +14,7 @@
     "graphicDesign": "طراحی گرافیک",
     "WebsiteDesign": "طراحی وب",
     "knowMore": "بیشتر بدانید",
+    "PortFolio": " نمونه کارها  ",
 
     "portfolio": {
         "transport": " ترانسپورت ",
@@ -28,13 +29,13 @@
     "viewAllWork": "مشاهده تمام کارها",
 
     "ourTeam": " تیم ما",
-    "meetTheLegend": " با افسانه ها آشنا شوید",
+    "meetTheLegend": " با اعضا آشنا شوید",
     "team": {
         "nasim": "نسیم",
         "mostafa": "مصطفی",
         "zabihullah": "ذبیح الله",
         "hamid": "حمید",
-        "razeq": "رازق",
+        "raziq": "رازق",
         "arsalan": "ارسلان",
         "ehsan": "احسان",
         "khalid": "خالد",
@@ -83,5 +84,20 @@
     "10ContentProofreadingTipsToCatchAvoidableGoofs": "10 نکته ویرایش محتوا برای جلوگیری از اشتباهات قابل اجتناب",
     "DataSecureOnTransitioningToANewOffice": "امنیت داده در انتقال به یک دفتر جدید",
     "DGITAL": "دیجیتال",
-    "Modern": "مدرن"
+    "Modern": "مدرن",
+    "Address": "الماس شرق - چهارایی گلها - هرات - افغانستان",
+    "Email": "alkharazmi.soft@gmail.com",
+    "SubscribeOurNewsletter": "به خبرنامه ما بپیوندید",
+    "SubscribeOurNewsletterDescription": "با ما بمانید و از آخرین اخبار و به روز رسانی ها مطلع شوید. با ما در تماس باشید و از جدیدترین خدمات و پیشنهادات ما باخبر شوید.",
+    "placeholder": {
+        "email": "ایمیل خود را وارد کنید"
+    },
+    "Discover": "کشف کنید",
+    "About": "درباره",
+    "Blog": "وبلاگ",
+    "Contact Us": "تماس با ما",
+    "Careers": "فرصت های شغلی",
+    "CopyrightAlKharazmi": "کپی رایت © 2024 الخوارزمی توسط",
+    "AllRightsReserved": "تمامی حقوق محفوظ است",
+    "BOOKACALLNOW": "اکنون یک تماس بگیرید"
 }

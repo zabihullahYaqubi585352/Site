@@ -1,19 +1,23 @@
-const logo = '/assets/alkharazmi_heroLogo_100.webp'
+const logo = '/assets/alkharazmi_heroLogo_100.webp';
+import { useTranslation } from 'react-i18next';
+import './i18n';
 const Footer = () => {
+    const { t, i18n } = useTranslation();
+    const isRTL = i18n.dir() === 'rtl';
     return (
         <div className="scrollbar-webkit relative mt-20 grid w-full grid-cols-1 gap-10 bg-[#0e0e0e]">
             <div className="w-full bg-[url('/assets/footer.webp')] py-10">
-                <div className=" sm: mx-auto grid max-w-[500px] grid-cols-1 gap-8 px-10 py-10 md:max-w-[800px] lg:max-w-[1000px] lg:grid-cols-5 xl:max-w-[1200px] 2xl:max-w-[1440px]">
-                    <div className=" col-span-2 max-w-[690px] py-2">
+                <div className="sm: mx-auto grid max-w-[500px] grid-cols-1 gap-8 px-10 py-10 md:max-w-[800px] lg:max-w-[1000px] lg:grid-cols-5 xl:max-w-[1200px] 2xl:max-w-[1440px]">
+                    <div className="col-span-2 max-w-[690px] py-2">
                         <div>
                             {' '}
-                            <div className="hover:cursor-pointer w-[300px]">
+                            <div className="w-[300px] hover:cursor-pointer">
                                 <img src={logo} className="object-cover" alt="footer Image" />
                             </div>{' '}
                         </div>
-                        <div className=" mt-6 flex flex-col item-between gap-4">
-                            <div className=" group flex flex-col">
-                                <div className="flex items-center gap-2 text-md text-white group-hover:text-[#2baa8d]">
+                        <div className="item-between mt-6 flex flex-col gap-4">
+                            <div className="group flex flex-col">
+                                <div className="text-md flex items-center gap-2 text-white group-hover:text-[#2baa8d]">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         height="20px"
@@ -26,72 +30,73 @@ const Footer = () => {
                                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
                                         <circle cx="12" cy="9" r="2.5" />
                                     </svg>
-                                  Almas-e-sharq-Gulha square - Herat - Afghanistan
+                                    {t('Address')}
                                 </div>
-
                             </div>
-                            <div className='flex flex-col justify-center items-start gap-2 xl:flex-row xl:justify-between '>
-                            <div className="  group flex items-center justify-center text-md text-white ">
-                                <div className='flex items-center'>
+                            <div className="flex flex-col items-start justify-center gap-4 xl:flex-row xl:justify-between">
+                                <div className="group text-md flex items-center justify-center gap-2 p-2 text-white">
+                                    <div className="flex items-center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            height="15"
+                                            width="15"
+                                            viewBox="0 0 512 512"
+                                            fill="white"
+                                            className="group-hover:fill-[#2baa8d]"
+                                        >
+                                            <path
+                                                fill="#fafafa"
+                                                d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
+                                            />
+                                        </svg>{' '}
+                                    </div>
+
+                                    <div className="flex flex-nowrap group-hover:text-[#2baa8d]">(+93) 797658636</div>
+                                </div>
+                                <div className="group text-md flex items-center justify-center gap-2 text-white">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        height="15"
-                                        width="15"
-                                        viewBox="0 0 512 512"
-                                        fill="white"
-                                        className="mt-2 mr-2 group-hover:fill-[#2baa8d]"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#FFFFFF"
+                                        className="mt-1 mr-2 group-hover:fill-[#2baa8d]"
                                     >
-                                        <path
-                                            fill="#fafafa"
-                                            d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
-                                        />
-                                    </svg>{' '}
+                                        <path d="M202.28-248.5q-20.92 0-35.1-14.19Q153-276.89 153-297.84v-364.64q0-20.96 14.18-34.99 14.18-14.03 35.1-14.03h555.44q20.92 0 35.1 14.19Q807-683.11 807-662.16v364.64q0 20.96-14.18 34.99-14.18 14.03-35.1 14.03H202.28ZM480-480.25 170.5-669.5V-298q0 14 9 23t23 9h555q14 0 23-9t9-23v-371.5L480-480.25Zm0-36.25L773-694H187l293 177.5Zm-309.5-153V-694v396q0 14 9 23t23 9h-32v-403.5Z" />
+                                    </svg>
+
+                                    <div className="group-hover:text-[#2baa8d]"> alkharazmi.soft@gmail.com</div>
                                 </div>
-
-                                <div className="group-hover:text-[#2baa8d] flex flex-nowrap">(+93) 797658636</div>
                             </div>
-                            <div className=" group flex items-center justify-center text-md text-white">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="24px"
-                                    viewBox="0 -960 960 960"
-                                    width="24px"
-                                    fill="#FFFFFF"
-                                    className="mt-1 mr-2 group-hover:fill-[#2baa8d]"
-                                >
-                                    <path d="M202.28-248.5q-20.92 0-35.1-14.19Q153-276.89 153-297.84v-364.64q0-20.96 14.18-34.99 14.18-14.03 35.1-14.03h555.44q20.92 0 35.1 14.19Q807-683.11 807-662.16v364.64q0 20.96-14.18 34.99-14.18 14.03-35.1 14.03H202.28ZM480-480.25 170.5-669.5V-298q0 14 9 23t23 9h555q14 0 23-9t9-23v-371.5L480-480.25Zm0-36.25L773-694H187l293 177.5Zm-309.5-153V-694v396q0 14 9 23t23 9h-32v-403.5Z" />
-                                </svg>
-                                <div className="group-hover:text-[#2baa8d]">alkharazmi.soft@gmail.com</div>
-                            </div>
-                            </div>
-
                         </div>
 
                         <div className="mt-10 flex h-[60px] w-[240px] justify-center rounded-[40px] border border-gray-700 hover:bg-[#2baa8d]">
                             {' '}
-                            <span className="flex items-center justify-center py-4 text-lg font-bold text-gray-100">BOOK A CALL NOW</span>
+                            <span className="flex items-center justify-center py-4 text-lg font-bold text-gray-100">{t('BOOKACALLNOW')}</span>
                         </div>
                     </div>
-                    <div className=" col-span-1 flex max-w-[690px] flex-col items-start px-[15px] lg:ml-20">
-                        <div className="mb-5 text-2xl text-white">Discover</div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> About </div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> Blog </div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> Contact Us</div>
-                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]">Careers</div>
+                    <div className="col-span-1 flex max-w-[690px] flex-col items-start px-[15px] lg:ml-20">
+                        <div className="mb-5 text-2xl text-white"> {t('Discover')}</div>
+                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('About')} </div>
+                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Blog')} </div>
+                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Contact Us')}</div>
+                        <div className="mb-4 text-xl text-white hover:text-[#2baa8d]"> {t('Careers')}</div>
                     </div>
                     <div className="col-span-2 flex max-w-[690px] flex-col">
                         <div className=" ">
-                            <h5 className="px-4 pb-4 text-3xl text-white">Subscribe our newsletter</h5>
+                            <h5 className="px-4 pb-4 text-3xl text-white">{t('SubscribeOurNewsletter')}</h5>
                         </div>
                         <div className="mb-4">
                             {' '}
-                            <p className="px-4 py-4 text-xl text-white">
-                                Welcome to our digital agency We specialize in helping business most like yours succeed online.
-                            </p>
+                            <p className="px-4 py-4 text-xl text-white">{t('SubscribeOurNewsletterDescription')}</p>
                         </div>
-                        <div className=" rounded-sm mx-[20px] flex items-center justify-between border border-gray-500 ">
-                            <div className="flex w-full items-center justify-between bg-transparent  ">
-                                <input type="email" placeholder="Enter You Email " className="outline-none mx-6 w-full bg-transparent py-4 text-lg text-gray-300" />
+                        <div className="mx-[20px] flex items-center justify-between rounded-sm border border-gray-500">
+                            <div className="flex w-full items-center justify-between bg-transparent">
+                                <input
+                                    type="email"
+                                    placeholder={t('placeholder.email')}
+                                    className="mx-6 w-full bg-transparent py-4 text-lg text-gray-300 outline-none"
+                                />
 
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -112,11 +117,14 @@ const Footer = () => {
 
                 <div className="sm: mx-auto flex max-w-[500px] flex-col items-center justify-center gap-10 md:max-w-[800px] lg:max-w-[1000px] lg:flex-row lg:justify-between xl:max-w-[1200px] 2xl:max-w-[1440px]">
                     <div className="text-center text-lg text-gray-500">
-                        Copyright © 2024 Al-kharazmi by
-                        <span className="mx-1 hover:text-[#2baa8d]">Elegant-Themes</span>. All Rights Reserved.
+                        {t('CopyrightAlKharazmi')}
+                        <span className="mx-1 hover:text-[#2baa8d]"> {t('AllRightsReserved')}</span>
                     </div>
                     <div className="mx-4 flex items-center gap-2">
-                        <a href=""  className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
+                        <a
+                            href=""
+                            className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512">
                                 <path
                                     fill="#f4f5f5"
@@ -124,7 +132,11 @@ const Footer = () => {
                                 />
                             </svg>
                         </a>
-                        <a href='https://www.linkedin.com/company/alkharazmi/posts/?feedView=all' target='_blank' className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
+                        <a
+                            href="https://www.linkedin.com/company/alkharazmi/posts/?feedView=all"
+                            target="_blank"
+                            className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512">
                                 <path
                                     fill="#fafafa"
@@ -133,7 +145,11 @@ const Footer = () => {
                             </svg>
                         </a>
 
-                        <a href='https://www.facebook.com/profile.php?id=61568762697550' target='_blank' className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61568762697550"
+                            target="_blank"
+                            className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-400 hover:bg-[#2baa8d]"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 320 512">
                                 <path
                                     fill="#fafafa"

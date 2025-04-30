@@ -8,7 +8,7 @@ const Suporters = () => {
         <div>
             <div className="sm: mx-auto flex max-w-[500px] px-4 py-20 md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
                 <div className="flex space-x-16 overflow-hidden">
-                    <div className={`flex space-x-16 ${isRTL ? 'scroll-ltr' : 'scroll-rtl'}`}>
+                    <div className="loop-image flex space-x-16">
                         <img
                             decoding="async"
                             src="https://gossip-themes.com/xpovio/wp-content/uploads/2024/01/one.png"
@@ -136,7 +136,7 @@ const Suporters = () => {
                             className="max-w-none"
                         ></img>
                     </div>
-                    <div className={`flex space-x-16 ${isRTL ? 'scroll-ltr' : 'scroll-rtl'}`} aria-hidden="true">
+                    <div className="loop-image flex space-x-16" aria-hidden="true">
                         <img
                             decoding="async"
                             src="https://gossip-themes.com/xpovio/wp-content/uploads/2024/01/one.png"
