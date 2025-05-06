@@ -143,7 +143,7 @@ const Legends = () => {
                 </div>
 
                 <div className="max-w-full pt-4 pb-10">
-                    <h1 className="w-[90%] text-6xl font-bold text-[#2baa8d] sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-6xl 2xl:leading-tight">
+                    <h1 className="text-6xl font-bold text-[#2baa8d] max-sm:text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-6xl 2xl:leading-tight">
                         {t('meetTheLegend')}
                     </h1>
                 </div>
@@ -152,7 +152,7 @@ const Legends = () => {
                 <Slider {...settings} className="flex">
                     {SlideContents.map((x, i) => (
                         <div key={i} className="slick-slider h-[450px] rounded-xl text-white">
-                            <div className="group relative rounded-t-xl">
+                            <div className="group relative flex items-center justify-center rounded-t-xl">
                                 {x.image && (
                                     <img
                                         src={x.image}

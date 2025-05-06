@@ -6,7 +6,7 @@ import './i18n';
 const Banar = () => {
     const { t, i18n } = useTranslation();
     return (
-        <div className="z-[1] mx-auto w-full max-w-[500px] sm:relative md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+        <div className="z-[1] mx-auto w-full sm:relative md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="absolute -z-[3] hidden h-full w-full items-center justify-around gap-4 lg:flex">
                 <div className="h-full w-[1px] bg-gray-900"></div>
                 <div className="h-full w-[1px] bg-gray-900"></div>
@@ -14,7 +14,7 @@ const Banar = () => {
                 <div className="h-full w-[1px] bg-gray-900"></div>
                 <div className="h-full w-[1px] bg-gray-900"></div>{' '}
             </div>
-            <div className="bg-grenn relative z-[3] pt-[200px] pb-[100px] sm:max-w-[500px] sm:pt-[300px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+            <div className="relative z-[3] pt-[200px] pb-[100px] sm:max-w-[500px] sm:pt-[300px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
                 <h1 className="sm:text-[50px]sm:mx-4 -z-[6] mx-8 text-[32px] font-bold text-white uppercase lg:text-[70px] xl:text-[100px] xl:font-extrabold">
                     <div className="relative ml-12 inline-block">
                         <div className="relative inline-block">{t('AlKharazmi')} </div>

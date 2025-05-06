@@ -16,7 +16,7 @@ const DigitalLocation = () => {
                     <img
                         src={digital2}
                         alt="About digitalLocation"
-                        className={`absolute z-10 px-4 ${dir === 'rtl' ? 'right-[150px]' : 'left-[150px]'} max-sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} md:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'} lg:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} xl:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} 2xl:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'}`}
+                        className={`absolute z-10 px-4 ${dir === 'rtl' ? 'right-[100px]' : 'left-[150px]'} max-sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} sm:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} md:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'} lg:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} xl:${dir === 'rtl' ? 'right-[100px]' : 'left-[100px]'} 2xl:${dir === 'rtl' ? 'right-[200px]' : 'left-[200px]'}`}
                         // className="absolute left-[250px] z-10 px-4 max-sm:left-[100px] sm:left-[100px] md:left-[200px] lg:left-[100px] xl:left-[100px] 2xl:left-[200px]"
                     />
                 </div>
@@ -32,15 +32,15 @@ const DigitalLocation = () => {
                     </div>
 
                     <div className="w-full">
-                        <h1 className="w-[90%] text-3xl leading-tight font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
+                        <h1 className="text-3xl leading-tight font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl">
                             <Trans i18nKey="location" components={{ 1: <span className="text-[#2baa8d]" /> }} />
 
                             {/* We are a web developmednt group based in <span className='text-[#2baa8d]'> Herat</span> */}
                         </h1>
                     </div>
-                    <div className="ml-[15px]">
+                    <div className="">
                         {' '}
-                        <p className="w-[90%] pr-[10px] text-xl text-white">
+                        <p className="text-lg text-white">
                             {t('companyDescription')}
                             {/* Empowering businesses with innovative web development, striking graphic design, and cutting-edge web applications. We
                             create impactful digital experiences that drive growth and efficiency. By blending creativity with technical expertise, we

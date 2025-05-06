@@ -24,7 +24,7 @@ const DigitalPortfolio = () => {
         { img: eight, titleKey: 'portfolio.afghanSharq' },
     ];
     return (
-        <section className="sm: relative mx-auto mb-[40px] block max-w-[500px] px-10 py-[100px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+        <section className="mx-auto mb-[40px] block max-w-[500px] px-6 py-[100px] sm:relative md:max-w-[800px] lg:max-w-[1000px] lg:px-10 xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="mx-auto mb-[40px] block max-w-[500px] overflow-hidden py-4 sm:relative md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
                 <div className="flex w-[10000px]">
                     <div className="loop-scrool-ltr mx-[15px] h-full">
@@ -97,15 +97,15 @@ const DigitalPortfolio = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid w-full grid-cols-1 px-10 py-4">
+            <div className="grid w-full grid-cols-1">
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {portfolios?.map((e, i) => (
                         <div
                             key={i}
-                            className="group relative z-10 overflow-hidden before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]"
+                            className="group relative z-10 mx-4 overflow-hidden before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]"
                         >
                             <a href="" className="w-full cursor-pointer">
-                                <img src={e.img} alt="About portfolio" className="h-[450px] w-full object-cover" />
+                                <img src={e.img} alt="About portfolio" />
                             </a>
                             <div className="group-hover: transitionY absolute top-0 right-0 z-1 hidden h-[250px] w-[250px] max-w-[90%] flex-col justify-start bg-white group-hover:flex group-hover:transition-opacity">
                                 <div className="mx-8 my-10 flex items-center justify-end">
@@ -120,16 +120,16 @@ const DigitalPortfolio = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="grid h-[450px] grid-cols-1 border border-[#2baa8d]">
-                        <div className="flex h-[150px] items-start justify-start py-10 pl-10">
+                    <div className="mx-4 grid grid-cols-1 border border-[#2baa8d]">
+                        <div className="flex h-[150px] items-start justify-start px-8 py-10">
                             <img
                                 src="https://gossip-themes.com/xpovio/wp-content/themes/xpovio/assets/images/portfolio-dot.png"
                                 alt="dot image"
                                 className="h-[100px] w-[100px]"
                             />
                         </div>
-                        <div className="mb-20 flex items-center justify-center text-2xl text-white">{t('viewAllWork')}</div>
-                        <div className="flex items-center justify-around">
+                        <div className="flex items-center justify-center text-2xl text-white">{t('viewAllWork')}</div>
+                        <div className="flex items-center justify-around py-4">
                             <svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 960" width="60px" fill="#2baa8d">
                                 <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />
                             </svg>{' '}

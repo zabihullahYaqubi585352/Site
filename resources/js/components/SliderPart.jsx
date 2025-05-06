@@ -120,9 +120,9 @@ const SliderPart = () => {
             </div>
 
             <div className="flex flex-col gap-8 py-20 2xl:flex-row">
-                <div className="grid max-w-[1200px] grid-cols-3 gap-8 max-lg:grid-cols-1">
-                    <div className="mx-4 flex items-center justify-start">
-                        <img src={imageList[current]} alt="testimonial" />
+                <div className="grid max-w-[1200px] grid-cols-3 gap-4 max-lg:grid-cols-1">
+                    <div className="flex items-center justify-start gap-4">
+                        <img src={imageList[current]} alt="testimonial " />
                     </div>
                     <div className="col-span-2 flex flex-col gap-4">
                         <div className="mx-4">
@@ -134,8 +134,8 @@ const SliderPart = () => {
                             </svg>
                         </div>
 
-                        <div className="mx-4">
-                            <h4 className="mx-3 text-xl text-white">{testimonials[current].text}</h4>
+                        <div className="mx-2">
+                            <h4 className="text-lg text-white">{testimonials[current].text}</h4>
                         </div>
                         <div className="mx-4">
                             <h5 className="mx-3 pb-4 text-2xl text-white">{testimonials[current].name}</h5>
