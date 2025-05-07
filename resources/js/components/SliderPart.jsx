@@ -8,7 +8,7 @@ const rahmani = '/assets/testimonials/rahmani.webp';
 
 const SliderPart = () => {
     const { t, i18n } = useTranslation();
-    const testimonials = t('testimonials', { returnObjects: true });
+    let testimonials = t('testimonials', { returnObjects: true });
     const isRTL = i18n.dir() === 'rtl';
     const imageList = [framarz, mobin, rahmani];
     if (!Array.isArray(testimonials)) {

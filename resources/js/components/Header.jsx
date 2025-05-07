@@ -9,11 +9,12 @@ const languages = [
 ];
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(languages[0]);
     const isRTL = (langCode) => ['fa', 'ar', 'he', 'ur'].includes(langCode);
+    const dir = i18n.dir();
 
-    const { t, i18n } = useTranslation();
     const changeLanguage = (langCode) => {
         i18n.changeLanguage(langCode);
         const direction = isRTL(langCode) ? 'rtl' : 'ltr';
@@ -41,7 +42,9 @@ const Header = () => {
                     </svg>
 
                     {open && (
-                        <ul className="absolute top-22 z-10 mt-2 w-40 rounded-md border border-gray-200 bg-white shadow-lg">
+                        <ul
+                            className={`absolute top-20 left-340 z-10 mt-2 w-40 rounded-md border border-gray-200 bg-white ${dir === 'rtl' ? 'right-340' : 'left-340'} `}
+                        >
                             {languages.map((lang) => (
                                 <li
                                     key={lang.code}
