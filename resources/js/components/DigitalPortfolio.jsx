@@ -23,11 +23,12 @@ const DigitalPortfolio = () => {
         { img: seven, titleKey: 'portfolio.topbook' },
         { img: eight, titleKey: 'portfolio.afghanSharq' },
     ];
+
     return (
         <section className="mx-auto mb-[40px] block max-w-[500px] px-6 py-[100px] sm:relative md:max-w-[800px] lg:max-w-[1000px] lg:px-10 xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="mx-auto mb-[40px] block max-w-[500px] overflow-hidden py-4 sm:relative md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-                <div className="flex w-[10000px]">
-                    <div className="loop-scrool-ltr mx-[15px] h-full">
+                <div className="flex w-[10000px] py-6">
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
                             <a href="" className="inline-flex items-center gap-[8px] outline-0">
                                 {t('PortFolio')}
@@ -44,9 +45,31 @@ const DigitalPortfolio = () => {
                             </svg>
                         </h2>
                     </div>
-                    <div className="loop-scrool-ltr mx-[15px] h-full">
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
+                        <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
+                            <a
+                                href=""
+                                className={`inline-flex items-center gap-[8px] outline-0 ${
+                                    isRTL ? 'text-[#2baa8d]' : 'text-strokeH1 text-transparent'
+                                }`}
+                            >
+                                {t('PortFolio')}
+                            </a>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="50px"
+                                viewBox="0 -960 960 960"
+                                width="50px"
+                                fill="#2baa8d"
+                                className="lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                            >
+                                <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
+                            </svg>
+                        </h2>
+                    </div>
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
+                            <a href="" className="inline-flex items-center gap-[8px] text-white outline-0 hover:stroke-[#2baa8d]">
                                 {t('PortFolio')}
                             </a>
                             <svg
@@ -61,26 +84,14 @@ const DigitalPortfolio = () => {
                             </svg>
                         </h2>
                     </div>
-                    <div className="loop-scrool-ltr mx-[15px] h-full">
-                        <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="inline-flex items-center gap-[8px] outline-0">
-                                {t('PortFolio')}
-                            </a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                height="50px"
-                                viewBox="0 -960 960 960"
-                                width="50px"
-                                fill="#2baa8d"
-                                className="lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
-                            >
-                                <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
-                            </svg>
-                        </h2>
-                    </div>
-                    <div className="loop-scrool-ltr mx-[15px] flex h-full">
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
+                            <a
+                                href=""
+                                className={`inline-flex items-center gap-[8px] outline-0 hover:stroke-[#2baa8d] ${
+                                    isRTL ? 'text-white' : 'text-strokeH1 text-transparent'
+                                }`}
+                            >
                                 {t('PortFolio')}
                             </a>
                             <svg
@@ -89,7 +100,7 @@ const DigitalPortfolio = () => {
                                 viewBox="0 -960 960 960"
                                 width="50px"
                                 fill="transparent"
-                                className="stroke-[#2baa8d]stroke-[10] lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                                className="stroke-[#2baa8d] stroke-[10] lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
                             >
                                 <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
                             </svg>

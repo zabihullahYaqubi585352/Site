@@ -17,15 +17,15 @@
     animation: loop-scroll 60s linear infinite;
 }
 .loop-scrool-rtl {
-    animation: loop-scroll-rtl 20s linear infinite;
+    animation: loop-scroll-rtl 60s linear infinite;
 }
 
 @keyframes loop-scroll {
     from {
-        transform: translateX(0%);
+        transform: translateX(-200%);
     }
     to {
-        transform: translateX(-200%);
+        transform: translateX(0%);
     }
 }
 
@@ -34,7 +34,7 @@
         transform: translateX(0%);
     }
     to {
-        transform: translateX(100%);
+        transform: translateX(-200%);
     }
 }
 
