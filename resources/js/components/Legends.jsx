@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import './i18n';
 const Razeq = '/assets/LegendPhotos/abdulrazeq.webp';
 const AhmadShah = '/assets/LegendPhotos/ahmadShah.webp';
+const WaliAhmad = '/assets/LegendPhotos/WaliAhmad.webp';
 const Arsalan = '/assets/LegendPhotos/arsalan.webp';
 const Ehsan = '/assets/LegendPhotos/ehsan.webp';
 const Hamid = '/assets/LegendPhotos/hamid.webp';
@@ -20,71 +23,79 @@ const NasimGif = '/assets/cpmpressed/Nasim.gif';
 const RazeqGif = '/assets/cpmpressed/Razeq.gif';
 const SebghatGif = '/assets/cpmpressed/Sebghat.gif';
 const zabihGif = '/assets/cpmpressed/Zabih.gif';
+const WaliAhmadGif = '/assets/cpmpressed/WaliAhmad.gif';
 
 const SlideContents = [
     {
-        name: 'Nasim Abdullah',
+        name: 'team.nasim',
         image: Nasim,
         Gif: NasimGif,
-        level: 'Full-Stack Developer',
+        level: 'roles.fullstack',
+    },
+    {
+        name: 'team.waliAhmad',
+        image: WaliAhmad,
+        Gif: WaliAhmadGif,
+        level: 'roles.frontend',
     },
 
     {
-        name: 'Mostafa Shakibani',
+        name: 'team.mostafa',
         Gif: MostafaGif,
         image: Mostafa,
-        level: 'Full-Stack Developer',
+        level: 'roles.fullstack',
     },
     {
-        name: 'Zabihullah Yaqubi',
+        name: 'team.zabihullah',
         Gif: zabihGif,
         image: zabihullah,
-        level: 'Fronted Developer',
+        level: 'roles.frontend',
     },
     {
-        name: 'Hamid Faqiri',
+        name: 'team.hamid',
         image: Hamid,
         Gif: HamidGif,
-        level: 'Backend Developer',
+        level: 'roles.backend',
     },
     {
-        name: 'Razeq Quarishi',
+        name: 'team.raziq',
         Gif: RazeqGif,
         image: Razeq,
-        level: 'Frontend Developer',
+        level: 'roles.frontend',
     },
     {
-        name: 'Arsalan Asefi',
+        name: 'team.arsalan',
         image: Arsalan,
-        level: 'Frontend Developer-Dsigner',
+        level: 'roles.frontendDesigner',
         Gif: ArsalanGif,
     },
     {
-        name: 'Ehsan Haidary',
+        name: 'team.ehsan',
         image: Ehsan,
-        level: 'Frontend Developer',
+        level: 'roles.frontend',
         Gif: EhsanGif,
     },
     {
-        name: 'Ahmad khalid Behmanish',
+        name: 'team.khalid',
         image: khalid,
-        level: 'Managing Director',
+        level: 'roles.manager',
         Gif: '',
     },
     {
-        name: 'Ahmad Shah',
+        name: 'team.ahmadShah',
         image: AhmadShah,
-        level: 'Frontend Developer-Designer',
+        level: 'roles.frontendDesigner',
         Gif: AhmadShahGif,
     },
     {
-        name: 'Sebghat Amin',
+        name: 'team.sebghat',
         image: Sebghat,
-        level: 'Frontend Developer',
+        level: 'roles.frontend',
         Gif: SebghatGif,
     },
 ];
 const Legends = () => {
+    const { t, i18n } = useTranslation();
     var settings = {
         dots: true,
         infinite: true,
@@ -123,7 +134,7 @@ const Legends = () => {
             <div className="mt-20">
                 <div className="flex h-[50px] w-[220px] justify-center gap-2 rounded-3xl border border-[#2baa8d]">
                     {' '}
-                    <span className="flex items-center justify-center text-xl text-[#2baa8d]">Our team</span>
+                    <span className="flex cursor-pointer items-center justify-center text-xl text-[#2baa8d]">{t('ourTeam')}</span>
                     <div className="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#2baa8d">
                             <path d="m243-240-51-51 405-405H240v-72h480v480h-72v-357L243-240Z" />
@@ -132,8 +143,8 @@ const Legends = () => {
                 </div>
 
                 <div className="max-w-full pt-4 pb-10">
-                    <h1 className="w-[90%] text-6xl font-bold text-[#2baa8d] sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-6xl 2xl:leading-tight">
-                        Meet the legents
+                    <h1 className="text-6xl font-bold text-[#2baa8d] max-sm:text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-6xl 2xl:leading-tight">
+                        {t('meetTheLegend')}
                     </h1>
                 </div>
             </div>
@@ -141,22 +152,26 @@ const Legends = () => {
                 <Slider {...settings} className="flex">
                     {SlideContents.map((x, i) => (
                         <div key={i} className="slick-slider h-[450px] rounded-xl text-white">
-                            <div className="group relative rounded-t-xl">
-                                <img
-                                    src={x.image}
-                                    alt="Legends photo"
-                                    className="full h-[300px] w-[350px] object-cover transition-opacity duration-300 group-hover:opacity-0"
-                                />
+                            <div className="group relative flex items-center justify-center rounded-t-xl">
+                                {x.image && (
+                                    <img
+                                        src={x.image}
+                                        alt="Legends photo"
+                                        className="full h-[300px] w-[450px] object-cover transition-opacity duration-300 group-hover:opacity-0"
+                                    />
+                                )}
 
-                                <img
-                                    src={x.Gif}
-                                    alt="Legends gif"
-                                    className="absolute top-0 left-0 hidden h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                />
+                                {x.Gif && (
+                                    <img
+                                        src={x.Gif}
+                                        alt="Legends gif"
+                                        className="absolute top-0 left-0 hidden h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                                    />
+                                )}
                             </div>
-                            <div className="  flex flex-col items-center justify-center bg-[#2baa8d] p-2">
-                                <h4 className="text-xl font-semibold">{x.name}</h4>
-                                <p className="mb-t text-lg font-semibold">{x.level}</p>
+                            <div className="flex flex-col items-center justify-center bg-[#2baa8d] p-2">
+                                <h4 className="text-xl font-semibold">{t(x.name)}</h4>
+                                <p className="mb-t text-lg font-semibold">{t(x.level)}</p>
                             </div>
                         </div>
                     ))}

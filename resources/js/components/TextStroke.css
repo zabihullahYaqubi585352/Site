@@ -11,46 +11,55 @@
 }
 .slick-slider > div {
     margin: 0 10px;
-   
-  }
- 
-
-@keyframes loop-scrool {
-  
-  to {
-    transform: translateX(-200%);
-   
-  }
 }
 
-.loop-scrool {
-  animation: loop-scrool 30s linear infinite;
+.loop-scrool-ltr {
+    animation: loop-scroll 60s linear infinite;
 }
+.loop-scrool-rtl {
+    animation: loop-scroll-rtl 20s linear infinite;
+}
+
+@keyframes loop-scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes loop-scroll-rtl {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
 @keyframes loop-image {
     from {
-      transform: translateX(0%);
-      
+        transform: translateX(0%);
     }
     to {
-      transform: translateX(-100%);
-    
+        transform: translateX(-100%);
     }
-  }
-  
-  .loop-image {
+}
+
+.loop-image {
     animation: loop-image 60s linear infinite;
-  }
-  @keyframes transitionY {
+}
+
+@keyframes transitionY {
     from {
-      transform: translateY(-300%);
-      
+        transform: translateY(-300%);
     }
     to {
-      transform: translateY(0%);
-     
+        transform: translateY(0%);
     }
-  }
-  
-  .transitionY {
+}
+
+.transitionY {
     animation: transitionY 0.5s ease-in-out;
-  }
+}
