@@ -22,7 +22,7 @@
 
 @keyframes loop-scroll {
     from {
-        transform: translateX(-200%);
+        transform: translateX(200%);
     }
     to {
         transform: translateX(0%);
@@ -37,18 +37,30 @@
         transform: translateX(-200%);
     }
 }
-
-@keyframes loop-image {
+@keyframes loop-image-rtl {
     from {
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 
-.loop-image {
-    animation: loop-image 60s linear infinite;
+.loop-image-rtl {
+    animation: loop-image-rtl 80s linear infinite;
+}
+
+@keyframes loop-image-ltr {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(200%);
+    }
+}
+
+.loop-image-ltr {
+    animation: loop-image-ltr 80s linear infinite;
 }
 
 @keyframes transitionY {

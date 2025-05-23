@@ -46,29 +46,12 @@ const SliderPart = () => {
 
     return (
         <section className="sm: mx-auto max-w-[500px] overflow-x-hidden px-10 py-10 md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-            <div className="sm: relative mx-auto mb-[40px] block max-w-[500px] overflow-hidden md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
-                <div className="w-[10000px]">
-                    <div className={`group float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-ltr'}`}>
-                        <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="inline-flex items-center gap-[8px] outline-0">
-                                CLIENT'STESTIMONIAL
-                            </a>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                height="50px"
-                                viewBox="0 -960 960 960"
-                                width="50px"
-                                fill="#2baa8d"
-                                className="lg:h-[80px] lg:w-[180px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
-                            >
-                                <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
-                            </svg>
-                        </h2>
-                    </div>
-                    <div className={`group float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-ltr'}`}>
+            <div className="mx-auto mb-[40px] block max-w-[500px] overflow-hidden py-4 sm:relative md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
+                <div className="flex w-[10000px] py-6">
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
-                                CLIENT'STESTIMONIAL
+                            <a href="" className="inline-flex items-center gap-[8px] text-white outline-0 hover:stroke-[#2baa8d]">
+                                {t('ClientsTimonial')}
                             </a>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -76,16 +59,21 @@ const SliderPart = () => {
                                 viewBox="0 -960 960 960"
                                 width="50px"
                                 fill="transparent"
-                                className="stroke-[#2baa8d] stroke-[10] lg:h-[80px] lg:w-[180px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                                className="stroke-[#2baa8d] stroke-[10] lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
                             >
                                 <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
                             </svg>
                         </h2>
                     </div>
-                    <div className={`float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-ltr'}`}>
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="inline-flex items-center gap-[8px] outline-0">
-                                CLIENT'STESTIMONIAL
+                            <a
+                                href=""
+                                className={`inline-flex items-center gap-[8px] outline-0 ${
+                                    isRTL ? 'text-[#2baa8d]' : 'text-strokeH1 text-transparent'
+                                }`}
+                            >
+                                {t('ClientsTimonial')}
                             </a>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -93,16 +81,21 @@ const SliderPart = () => {
                                 viewBox="0 -960 960 960"
                                 width="50px"
                                 fill="#2baa8d"
-                                className="lg:h-[80px] lg:w-[180px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                                className="lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
                             >
                                 <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
                             </svg>
                         </h2>
                     </div>
-                    <div className={`group float-left mx-[15px] block h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-ltr'}`}>
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
                         <h2 className="flex items-center text-3xl font-bold uppercase lg:text-6xl xl:text-8xl 2xl:text-9xl">
-                            <a href="" className="text-strokeH1 inline-flex items-center gap-[8px] text-transparent outline-0 hover:stroke-[#2baa8d]">
-                                CLIENT'STESTIMONIAL
+                            <a
+                                href=""
+                                className={`inline-flex items-center gap-[8px] outline-0 hover:stroke-[#2baa8d] ${
+                                    isRTL ? 'text-white' : 'text-strokeH1 text-transparent'
+                                }`}
+                            >
+                                {t('ClientsTimonial')}
                             </a>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +103,29 @@ const SliderPart = () => {
                                 viewBox="0 -960 960 960"
                                 width="50px"
                                 fill="transparent"
-                                className="stroke-[#2baa8d] stroke-[10] lg:h-[80px] lg:w-[180px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                                className="stroke-[#2baa8d] stroke-[10] lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
+                            >
+                                <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
+                            </svg>
+                        </h2>
+                    </div>
+                    <div className={`mx-[15px] h-full ${isRTL ? 'loop-scrool-ltr' : 'loop-scrool-rtl'}`}>
+                        <h2 className="flex items-center text-3xl font-bold text-white uppercase hover:text-[#2baa8d] lg:text-4xl xl:text-6xl 2xl:text-7xl">
+                            <a
+                                href=""
+                                className={`inline-flex items-center gap-[8px] outline-0 ${
+                                    isRTL ? 'text-[#2baa8d]' : 'text-strokeH1 text-transparent'
+                                }`}
+                            >
+                                {t('ClientsTimonial')}
+                            </a>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="50px"
+                                viewBox="0 -960 960 960"
+                                width="50px"
+                                fill="#2baa8d"
+                                className="lg:h-[80px] lg:w-[80px] xl:h-[100px] xl:w-[100px] 2xl:h-[130px] 2xl:w-[130px]"
                             >
                                 <path d="M364-195v-113h208.5l-404-404.5L248-792l404 404.5V-596h113v401H364Z" />
                             </svg>
@@ -118,7 +133,6 @@ const SliderPart = () => {
                     </div>
                 </div>
             </div>
-
             <div className="flex flex-col gap-8 py-20 2xl:flex-row">
                 <div className="grid max-w-[1200px] grid-cols-3 gap-4 max-lg:grid-cols-1">
                     <div className="flex items-center justify-start gap-4">
