@@ -1,3 +1,6 @@
+import { usePage } from '@inertiajs/react';
+import { useEffect } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 import Banar from '../components/Banar';
 import DigitalLocation from '../components/DigitalLocation';
 import DigitalPortfolio from '../components/DigitalPortfolio';
@@ -9,7 +12,20 @@ import NewBlogsPart from '../components/NewBlogsPart';
 import SliderPart from '../components/SliderPart';
 import Suporters from '../components/Suporters';
 
+type FlashProps = {
+    success?: string;
+    [key: string]: any;
+};
+
 function App() {
+    const { flash } = usePage().props as { flash?: FlashProps };
+    console.log('Page props:', usePage().props);
+    useEffect(() => {
+        if (flash?.success) {
+            toast.success(flash.success);
+        }
+    }, [flash]);
+
     return (
         <div>
             <Header />
@@ -22,6 +38,7 @@ function App() {
             <NewBlogsPart />
             <Suporters />
             <Footer />
+            <ToastContainer />
         </div>
     );
 }
