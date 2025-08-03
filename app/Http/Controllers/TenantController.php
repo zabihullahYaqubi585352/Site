@@ -38,6 +38,17 @@ public function store(Request $request)
     
 }
 
+
+public function adminDashboard()
+{
+    $tenants = Tenant::latest()->get();
+
+    return Inertia::render('Admin/Dashboard', [
+        'tenants' => $tenants,
+    ]);
+}
+
+
 public function index()
 {
     $tenants = Tenant::latest()->get();

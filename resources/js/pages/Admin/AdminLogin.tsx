@@ -1,18 +1,25 @@
 // resources/js/Pages/Admin/AdminLogin.tsx
-import { useForm } from '@inertiajs/react';
-import { FormEventHandler } from 'react';
+import { router, useForm, usePage } from '@inertiajs/react';
+import { FormEventHandler, useEffect } from 'react';
 
 const AdminLogin = () => {
     const { data, setData, post, processing, errors } = useForm({
         email: '',
         password: '',
     });
+    // Safely access auth from props
+    const auth = (usePage().props as { auth?: { user?: any } }).auth;
 
     const submit: FormEventHandler = (e) => {
         e.preventDefault();
         post('/admin/login'); // Make sure this matches your Laravel route
     };
 
+    useEffect(() => {
+        if (auth?.user) {
+            router.visit('/admin/dashboard');
+        }
+    }, [auth]);
     return (
         <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-200 to-purple-400 px-6 sm:px-0">
             <div className="w-full rounded-lg bg-slate-900 p-10 text-sm text-indigo-300 shadow-lg sm:w-96">
