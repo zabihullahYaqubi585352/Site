@@ -38,23 +38,44 @@ public function store(Request $request)
     
 }
 
-
-public function adminDashboard()
+public function adminDashboard(Request $request)
 {
-    $tenants = Tenant::latest()->get();
+    $search = $request->input('search', '');
+
+    $tenants = Tenant::query()
+        ->when($search, function ($query, $search) {
+            $query->where('userName', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%");
+        })
+        ->paginate(5)
+        ->withQueryString();
 
     return Inertia::render('Admin/Dashboard', [
         'tenants' => $tenants,
+        'filters' => ['search' => $search],
     ]);
 }
 
 
-public function index()
+   public function index(Request $request)
 {
-    $tenants = Tenant::latest()->get();
-    return Inertia::render('Tenant/Index', ['tenants' => $tenants]);
-    
+    $tenants = \App\Models\Tenant::query()
+        ->when($request->search, function ($query, $search) {
+            $query->where('userName', 'like', "%$search%")
+                  ->orWhere('email', 'like', "%$search%");
+        })
+        ->latest()
+        ->paginate(5) // backend pagination
+        ->withQueryString(); // keeps search query during pagination
+
+    return Inertia::render('Admin/Dashboard', [
+        'tenants' => $tenants,
+        'filters' => $request->only('search'),
+    ]);
 }
+
+    
+
 
     /**
      * Display the specified resource.

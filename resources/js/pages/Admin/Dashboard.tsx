@@ -1,5 +1,5 @@
 import { router, usePage } from '@inertiajs/react';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 
 interface Tenant {
     id: number;
@@ -10,34 +10,34 @@ interface Tenant {
     domainName: string;
 }
 
+interface PaginationLink {
+    url: string | null;
+    label: string;
+    active: boolean;
+}
+
 const handleLogout = () => {
     router.post('/admin/logout');
 };
 
-const ITEMS_PER_PAGE = 5;
-
 const Dashboard = () => {
-    const { tenants } = usePage().props as unknown as { tenants: Tenant[] };
-    const [search, setSearch] = useState('');
-    const [currentPage, setCurrentPage] = useState(1);
-
-    const filtered = useMemo(() => {
-        return tenants.filter((t) => t.userName.toLowerCase().includes(search.toLowerCase()) || t.email.toLowerCase().includes(search.toLowerCase()));
-    }, [search, tenants]);
-
-    const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-
-    const paginatedTenants = useMemo(() => {
-        const start = (currentPage - 1) * ITEMS_PER_PAGE;
-        return filtered.slice(start, start + ITEMS_PER_PAGE);
-    }, [currentPage, filtered]);
-
-    const goToPrevPage = () => {
-        setCurrentPage((prev) => Math.max(prev - 1, 1));
+    const { tenants, filters } = usePage().props as unknown as {
+        tenants: {
+            data: Tenant[];
+            current_page: number;
+            last_page: number;
+            links: PaginationLink[];
+        };
+        filters: {
+            search: string;
+        };
     };
 
-    const goToNextPage = () => {
-        setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+    const [search, setSearch] = useState(filters.search || '');
+
+    const handleSearch = (e: React.FormEvent) => {
+        e.preventDefault();
+        router.get('/tenants', { search }, { preserveState: true });
     };
 
     return (
@@ -68,18 +68,15 @@ const Dashboard = () => {
                     </button>
                 </div>
 
-                <div className="my-4">
+                <form onSubmit={handleSearch} className="my-4">
                     <input
                         type="text"
                         placeholder="Search by name or email..."
                         className="w-full max-w-sm rounded border border-gray-300 px-4 py-2 text-black outline-none"
                         value={search}
-                        onChange={(e) => {
-                            setSearch(e.target.value);
-                            setCurrentPage(1); // reset to first page on search
-                        }}
+                        onChange={(e) => setSearch(e.target.value)}
                     />
-                </div>
+                </form>
 
                 <div className="overflow-x-auto rounded shadow">
                     <table className="min-w-full divide-y divide-gray-200 bg-white text-black">
@@ -93,16 +90,17 @@ const Dashboard = () => {
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-200">
-                            {paginatedTenants.map((t) => (
-                                <tr key={t.id} className="hover:bg-gray-50">
-                                    <td className="px-4 py-2 text-center">{t.userName}</td>
-                                    <td className="px-4 py-2 text-center">{t.companyName}</td>
-                                    <td className="px-4 py-2 text-center">{t.phoneNumber}</td>
-                                    <td className="px-4 py-2 text-center">{t.email}</td>
-                                    <td className="px-4 py-2 text-center">{t.domainName}</td>
-                                </tr>
-                            ))}
-                            {paginatedTenants.length === 0 && (
+                            {tenants.data.length > 0 ? (
+                                tenants.data.map((t) => (
+                                    <tr key={t.id} className="hover:bg-gray-50">
+                                        <td className="px-4 py-2 text-center">{t.userName}</td>
+                                        <td className="px-4 py-2 text-center">{t.companyName}</td>
+                                        <td className="px-4 py-2 text-center">{t.phoneNumber}</td>
+                                        <td className="px-4 py-2 text-center">{t.email}</td>
+                                        <td className="px-4 py-2 text-center">{t.domainName}</td>
+                                    </tr>
+                                ))
+                            ) : (
                                 <tr>
                                     <td colSpan={5} className="px-4 py-4 text-center text-gray-500">
                                         No tenants found.
@@ -114,24 +112,16 @@ const Dashboard = () => {
                 </div>
 
                 {/* Pagination */}
-                <div className="mt-4 flex items-center justify-between">
-                    <button
-                        onClick={goToPrevPage}
-                        disabled={currentPage === 1}
-                        className="rounded bg-gray-600 px-4 py-2 text-white disabled:opacity-50"
-                    >
-                        Previous
-                    </button>
-                    <span className="text-white">
-                        Page {currentPage} of {totalPages}
-                    </span>
-                    <button
-                        onClick={goToNextPage}
-                        disabled={currentPage === totalPages}
-                        className="rounded bg-gray-600 px-4 py-2 text-white disabled:opacity-50"
-                    >
-                        Next
-                    </button>
+                <div className="mt-4 flex flex-wrap gap-2">
+                    {tenants.links.map((link, i) => (
+                        <button
+                            key={i}
+                            onClick={() => link.url && router.get(link.url)}
+                            disabled={!link.url}
+                            dangerouslySetInnerHTML={{ __html: link.label }}
+                            className={`rounded px-3 py-1 text-sm ${link.active ? 'bg-[#2baa8d] text-white' : 'bg-white text-gray-700'}`}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

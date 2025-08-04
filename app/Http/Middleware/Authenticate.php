@@ -11,12 +11,11 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-    
-
-    \Log::info('Redirecting to admin login...');
-    return route('admin.login');
-}
-
+        // If request expects JSON, don't redirect
+        if (!$request->expectsJson()) {
+            return route('admin.login'); // Your custom admin login route name
+        }
+    }
 }
 
     
