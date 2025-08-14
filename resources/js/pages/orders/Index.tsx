@@ -37,13 +37,20 @@ export default function Index() {
                         </div>
 
                         {/* Third part: Actions */}
-                        <div className="flex items-center justify-center p-4">
+                        <div className="flex items-center justify-around gap-3 p-4">
                             <Link
                                 href={'/product/' + card.name}
                                 prefetch
                                 className="flex items-center space-x-2 rounded-full bg-[#2baa8d] px-4 py-2 text-white hover:bg-[#238f7a]"
                             >
-                                ثبت سفارش
+                                order
+                            </Link>
+                            <Link
+                                href={'/product/detials/' + card.name}
+                                prefetch
+                                className="flex items-center space-x-2 rounded-full bg-amber-300 px-4 py-2 text-white hover:bg-amber-400"
+                            >
+                                Detials{' '}
                             </Link>
                         </div>
                     </div>

@@ -18,5 +18,11 @@ class OrderController extends Controller
             'id' => $id,
         ]);
     }
-  
+   public function getDetials(Request $request, $id)
+    {
+        // Logic to handle the order index view
+        return Inertia::render('Details/index', [
+            'id' => $id,
+        ]);
+    }
 }

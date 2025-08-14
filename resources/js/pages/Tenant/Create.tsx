@@ -1,5 +1,8 @@
-import { useForm } from '@inertiajs/react';
+import { router, useForm } from '@inertiajs/react';
+import axios from 'axios';
 import { LinkForwardIcon, UserIcon } from 'hugeicons-react';
+
+import { toast } from 'react-toastify';
 
 const CreateTenant = ({ id }: { id?: string }) => {
     const { data, setData, post, processing, errors } = useForm({
@@ -11,15 +14,27 @@ const CreateTenant = ({ id }: { id?: string }) => {
         domainName: '',
     });
 
-    const submit = (e: React.FormEvent<HTMLFormElement>) => {
+    const submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        post('/tenants'); // Laravel route
+        try {
+            const response = await axios.post('/tenants', {
+                ...data,
+                product_id: id, // send the product/system ID if needed
+            });
+            toast.success('Form submitted successfully!');
+            router.get('/');
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('There was a problem submitting the form.');
+        }
     };
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData('domainName', e.target.value);
     };
-
+    const backHandler = () => {
+        router.get('/order');
+    };
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-6">
             <div className="max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg">
@@ -74,7 +89,10 @@ const CreateTenant = ({ id }: { id?: string }) => {
                     {errors['domainName'] && <div className="mt-1 text-sm text-red-500">{errors['domainName']}</div>}
                 </div>
                 <div className="flex items-center justify-between gap-2 px-2 py-2">
-                    <div className="relative flex w-full items-center justify-center rounded-xl border border-gray-300 py-2">
+                    <div
+                        className="relative flex w-full cursor-pointer items-center justify-center rounded-xl border border-gray-300 py-2 hover:bg-gray-100"
+                        onClick={backHandler}
+                    >
                         <button type="button" className="text-lg font-semibold text-gray-500">
                             Back
                         </button>
@@ -84,8 +102,8 @@ const CreateTenant = ({ id }: { id?: string }) => {
                         </span>
                     </div>
 
-                    <div className="relative flex w-full items-center justify-center rounded-xl border border-[#2baa8d] bg-[#2baa8d] py-2">
-                        <button disabled={processing} type="submit" className="text-lg font-semibold text-white">
+                    <div className="relative flex w-full cursor-pointer items-center justify-center rounded-xl border border-[#2baa8d] bg-[#2baa8d] py-2">
+                        <button disabled={processing} type="submit" className="cursor-pointer text-lg font-semibold text-white">
                             select system
                         </button>
                         <span className="absolute inset-y-0 left-30 flex items-center pl-3 text-gray-500"> </span>

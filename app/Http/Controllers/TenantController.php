@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tenant;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Hash;
 class TenantController extends Controller
 {
@@ -14,7 +15,9 @@ class TenantController extends Controller
     
 public function create()
 {
-    return Inertia::render('Tenant/Create');
+     return Inertia::render('Admin/Dashboard', [
+        
+    ]);
 }
 
 public function store(Request $request)
@@ -38,43 +41,83 @@ public function store(Request $request)
     
 }
 
-public function adminDashboard(Request $request)
+  public function index(Request $request)
 {
-    $search = $request->input('search', '');
+    $query = Tenant::query();
 
-    $tenants = Tenant::query()
-        ->when($search, function ($query, $search) {
-            $query->where('userName', 'like', "%{$search}%")
-                  ->orWhere('email', 'like', "%{$search}%");
-        })
-        ->paginate(5)
-        ->withQueryString();
+    if ($request->filled('filter')) {
+        $query->where(function ($q) use ($request) {
+            $q->where('userName', 'like', '%' . $request->filter . '%')
+              ->orWhere('email', 'like', '%' . $request->filter . '%');
+        });
+    }
 
-    return Inertia::render('Admin/Dashboard', [
-        'tenants' => $tenants,
-        'filters' => ['search' => $search],
-    ]);
+    if ($request->filled('status')) {
+        $query->where('status', $request->status);
+    }
+
+    if ($request->filled('created_at')) {
+        $query->whereDate('created_at', $request->created_at);
+    }
+
+    if ($request->filled('sort_by')) {
+        $direction = $request->descending === 'true' ? 'desc' : 'asc';
+        $query->orderBy($request->sort_by, $direction);
+    }
+
+    $perPage = $request->per_page ?? 10;
+
+    return response()->json($query->paginate($perPage));
 }
 
 
-   public function index(Request $request)
+ 
+public function update(Request $request, $id)
 {
-    $tenants = \App\Models\Tenant::query()
-        ->when($request->search, function ($query, $search) {
-            $query->where('userName', 'like', "%$search%")
-                  ->orWhere('email', 'like', "%$search%");
-        })
-        ->latest()
-        ->paginate(5) // backend pagination
-        ->withQueryString(); // keeps search query during pagination
-
-    return Inertia::render('Admin/Dashboard', [
-        'tenants' => $tenants,
-        'filters' => $request->only('search'),
-    ]);
-}
-
     
+    try {
+        $validated = $request->validate([
+            'userName' => 'required|string',
+            'email' => 'required|email|unique:tenants,email,' . $id,
+            'companyName' => 'required|string',
+            'domainName' => 'required|string|unique:tenants,domain_name,' . $id,
+            'phoneNumber' => 'nullable|string',
+        ]);
+
+        $tenant = Tenant::findOrFail($id);
+
+        
+        $tenant->update([
+            'userName' => $validated['userName'],
+            'email' => $validated['email'],
+            'companyName' => $validated['companyName'],
+            'domainName' => $validated['domainName'],
+            'phoneNumber' => $validated['phoneNumber'] ?? null,
+        ]);
+        
+       
+        return response()->json([
+            'message' => 'Update successful',
+            'tenant' => $tenant->fresh() // Get fresh data from database
+        ]);
+        
+    } catch (\Illuminate\Validation\ValidationException $e) {
+        return response()->json([
+            'errors' => $e->errors(),
+        ], 422);
+    }
+}
+
+
+    public function destroy($id)
+    {
+        $tenant = Tenant::findOrFail($id);
+    $tenant->delete();
+
+    return response()->json(['message' => 'تننت حذف شد']);
+    }
+
+
 
 
     /**
@@ -88,24 +131,5 @@ public function adminDashboard(Request $request)
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Tenant $tenant)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Tenant $tenant)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Tenant $tenant)
-    {
-        //
-    }
+   
 }

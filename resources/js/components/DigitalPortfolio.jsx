@@ -1,29 +1,37 @@
-const one = '/assets/550X450/Layer 1.webp';
-const tow = '/assets/550X450/Layer 2.webp';
-const three = '/assets/550X450/Layer 3.webp';
-const four = '/assets/550X450/Layer 4.webp';
-const five = '/assets/550X450/Layer 5.webp';
-const six = '/assets/550X450/Layer 6.webp';
-const seven = '/assets/550X450/Layer 7.webp';
-const eight = '/assets/550X450/Layer 8.webp';
+// const one = '/assets/550X450/Layer 1.webp';
+// const tow = '/assets/550X450/Layer 2.webp';
+// const three = '/assets/550X450/Layer 3.webp';
+// const four = '/assets/550X450/Layer 4.webp';
+// const five = '/assets/550X450/Layer 5.webp';
+// const six = '/assets/550X450/Layer 6.webp';
+// const seven = '/assets/550X450/Layer 7.webp';
+// const eight = '/assets/550X450/Layer 8.webp';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './TextStroke.css';
 import './i18n';
 
 const DigitalPortfolio = () => {
     const { t, i18n } = useTranslation();
+    const [portfolios, setPortfolios] = useState([]);
     const isRTL = i18n.dir() === 'rtl';
-    const portfolios = [
-        { img: one, titleKey: 'portfolio.transport' },
-        { img: tow, titleKey: 'portfolio.octane' },
-        { img: three, titleKey: 'portfolio.nanonet' },
-        { img: four, titleKey: 'portfolio.metal' },
-        { img: five, titleKey: 'portfolio.abacus' },
-        { img: six, titleKey: 'portfolio.adaptix' },
-        { img: seven, titleKey: 'portfolio.topbook' },
-        { img: eight, titleKey: 'portfolio.afghanSharq' },
-    ];
-
+    // const portfolios = [
+    //     { img: one, titleKey: 'portfolio.transport' },
+    //     { img: tow, titleKey: 'portfolio.octane' },
+    //     { img: three, titleKey: 'portfolio.nanonet' },
+    //     { img: four, titleKey: 'portfolio.metal' },
+    //     { img: five, titleKey: 'portfolio.abacus' },
+    //     { img: six, titleKey: 'portfolio.adaptix' },
+    //     { img: seven, titleKey: 'portfolio.topbook' },
+    //     { img: eight, titleKey: 'portfolio.afghanSharq' },
+    // ];
+    useEffect(() => {
+        axios
+            .get('/projects')
+            .then((response) => setPortfolios(response.data))
+            .catch((error) => console.error('Error loading projects', error));
+    }, [portfolios]);
     return (
         <section className="mx-auto mb-[40px] block max-w-[500px] px-6 py-[100px] sm:relative md:max-w-[800px] lg:max-w-[1000px] lg:px-10 xl:max-w-[1200px] 2xl:max-w-[1440px]">
             <div className="mx-auto mb-[40px] block max-w-[500px] overflow-hidden py-4 sm:relative md:max-w-[800px] lg:mb-[80px] lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1440px]">
@@ -121,7 +129,7 @@ const DigitalPortfolio = () => {
                             className="group relative z-10 mx-4 overflow-hidden before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]"
                         >
                             <a href="" className="w-full cursor-pointer">
-                                <img src={e.img} alt="About portfolio" />
+                                <img src={`http://localhost:8000/storage/projects/${e.image}`} alt="About portfolio" />
                             </a>
                             <div className="group-hover: transitionY absolute top-0 right-0 z-1 hidden h-[250px] w-[250px] max-w-[90%] flex-col justify-start bg-white group-hover:flex group-hover:transition-opacity">
                                 <div className="mx-8 my-10 flex items-center justify-end">
@@ -131,7 +139,7 @@ const DigitalPortfolio = () => {
                                 </div>
                                 <div className="flex items-center justify-center text-2xl font-bold text-black hover:text-[#2baa8d]">
                                     {' '}
-                                    {t(e.titleKey)}
+                                    {e.projectName}
                                 </div>
                             </div>
                         </div>
@@ -157,7 +165,7 @@ const DigitalPortfolio = () => {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
     );
 };
