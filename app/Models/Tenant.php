@@ -15,5 +15,13 @@ class Tenant extends Model
         'email',
         'password',
         'domainName',
+        'project_id',  
+
     ];
+
+
+      public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
 }

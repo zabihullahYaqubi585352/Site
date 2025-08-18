@@ -21,6 +21,8 @@ const DashboardContent = () => {
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [deletingId, setDeletingId] = useState<number | null>(null);
     const [editedId, setEditedId] = useState<number | null>(null);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    const [deleteId, setDeleteId] = useState<number | null>(null);
 
     const fetchTenants = async () => {
         const params = {
@@ -43,6 +45,7 @@ const DashboardContent = () => {
 
     useEffect(() => {
         fetchTenants();
+        setPagination((p) => ({ ...p, page: 1 })); // Reset page when filter changes
     }, [pagination.page, sortBy, descending, filter, statusFilter, startDate]);
 
     interface SortHandler {
@@ -56,7 +59,11 @@ const DashboardContent = () => {
             setDescending(false);
         }
     };
-
+    interface Project {
+        id: number;
+        projectName: string;
+        image: string;
+    }
     interface Tenant {
         id: number;
         userName: string;
@@ -66,16 +73,28 @@ const DashboardContent = () => {
         status?: string;
         companyName?: string;
         domainName?: string;
+        project_id?: number;
+        project?: Project;
     }
+    const confirmDelete = (id: number) => {
+        setDeleteId(id); // ذخیره آی‌دی رکورد
+        setIsDeleteModalOpen(true); // باز کردن Modal
+    };
+    const handleDelete = async () => {
+        if (deleteId === null) return;
+        setIsDeleteModalOpen(false);
 
-    const handleDelete = async (id: number): Promise<void> => {
-        setDeletingId(id);
-        setTimeout(() => {
-            axios.delete(`/tenants/${id}`).then(() => {
-                setTenants((prev) => prev.filter((t) => t.id !== id));
-                setDeletingId(null);
-            });
-        }, 300); // مدت زمان انیمیشن
+        try {
+            await axios.delete(`/tenants/${deleteId}`);
+            setDeletingId(deleteId);
+            setTimeout(() => setDeletingId(null), 1000); // Reset after 1 second
+            // Remove the deleted tenant from the state
+            setTenants((prev) => prev.filter((t) => t.id !== deleteId));
+        } catch (error) {
+            console.error('Delete error:', error);
+        } finally {
+            setIsDeleteModalOpen(false);
+        }
     };
 
     const totalPages = Math.ceil(pagination.total / pagination.perPage);
@@ -91,15 +110,15 @@ const DashboardContent = () => {
         <div className="p-6">
             <h2 className="mb-4 text-2xl font-bold"> Users Managment</h2>
             {}
-            {tenants.length !== 0 && (
-                <div className="mb-4 flex flex-wrap gap-3">
-                    <input
-                        className="rounded border px-3 py-2"
-                        placeholder="Search by Name, Email "
-                        value={filter}
-                        onChange={(e) => setFilter(e.target.value)}
-                    />
-                    {/* <select className="rounded border px-3 py-2" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
+
+            <div className="mb-4 flex flex-wrap gap-3">
+                <input
+                    className="rounded border px-3 py-2"
+                    placeholder="Search by Name, Email "
+                    value={filter}
+                    onChange={(e) => setFilter(e.target.value)}
+                />
+                {/* <select className="rounded border px-3 py-2" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
                     <option value="">همه وضعیت‌ها</option>
                     <option className="text-black" value="active">
                         فعال
@@ -108,10 +127,9 @@ const DashboardContent = () => {
                         غیرفعال
                     </option>
                 </select> */}
-                </div>
-            )}
+            </div>
 
-            {tenants.length !== 0 && (
+            {tenants.length > 0 ? (
                 <table className="w-full overflow-hidden rounded border text-sm">
                     <thead className="bg-gray-400 text-center">
                         <tr>
@@ -122,6 +140,7 @@ const DashboardContent = () => {
                             <th className="px-4 py-2">Phone</th>
                             <th className="px-4 py-2">CompanyName</th>
                             <th className="px-4 py-2">Date</th>
+                            <th className="px-4 py-2">projectName</th>
                             <th className="px-4 py-2">DomainName</th>
                             <th className="px-4 py-2">Action</th>
                         </tr>
@@ -130,7 +149,7 @@ const DashboardContent = () => {
                         {tenants.map((t) => (
                             <tr
                                 key={t.id}
-                                className={`transition-all duration-300 ${deletingId === t.id ? 'scale-95 opacity-0' : ''} ${editedId === t.id ? 'bg-green-200' : ''} `}
+                                className={`transition-all duration-600 ${deletingId === t.id ? 'scale-95 opacity-0' : ''} ${editedId === t.id ? 'bg-green-200' : ''} `}
                             >
                                 <td className="px-4 py-2">{t.userName}</td>
                                 <td className="px-4 py-2">{t.email}</td>
@@ -138,6 +157,7 @@ const DashboardContent = () => {
 
                                 <td className="px-4 py-2">{t.companyName}</td>
                                 <td className="px-4 py-2">{new Date(t.created_at).toLocaleDateString()}</td>
+                                <td className="px-4 py-2">{t.project ? t.project.projectName : '—'}</td>
 
                                 {/* <td className="px-4 py-2">
                                 <span
@@ -165,7 +185,7 @@ const DashboardContent = () => {
                                     </button>
 
                                     {/* Delete Button */}
-                                    <button onClick={() => handleDelete(t.id)} className="rounded-lg bg-red-100 p-2 hover:bg-red-200" title="Delete">
+                                    <button onClick={() => confirmDelete(t.id)} className="rounded-lg bg-red-100 p-2 hover:bg-red-200" title="Delete">
                                         <Delete size={20} color="red" />
                                     </button>
                                 </td>
@@ -173,6 +193,10 @@ const DashboardContent = () => {
                         ))}
                     </tbody>
                 </table>
+            ) : (
+                <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl bg-gray-200 py-6 text-center text-lg text-gray-600 shadow-lg">
+                    No matching records found.
+                </div>
             )}
 
             {tenants.length !== 0 && (
@@ -329,6 +353,23 @@ const DashboardContent = () => {
                                 className="rounded-lg bg-[#2baa8d] px-8 py-2 text-white"
                             >
                                 Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {isDeleteModalOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                    <div className="flex w-full max-w-sm flex-col gap-4 rounded-lg bg-white p-6 shadow-lg">
+                        <h3 className="text-center text-xl font-bold text-red-600">Confirm Delete</h3>
+                        <p className="text-center text-gray-700">Are you sure you want to delete this user?</p>
+                        <div className="flex justify-center gap-4">
+                            <button onClick={() => setIsDeleteModalOpen(false)} className="rounded bg-gray-200 px-6 py-2 hover:bg-gray-300">
+                                Cancel
+                            </button>
+                            <button onClick={handleDelete} className="rounded bg-red-600 px-6 py-2 text-white hover:bg-red-700">
+                                Yes
                             </button>
                         </div>
                     </div>

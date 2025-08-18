@@ -29,6 +29,7 @@ public function store(Request $request)
         'email' => 'required|email|unique:tenants',
         'password' => 'required|string|min:6',
         'domainName' => 'required|string|max:255|unique:tenants',
+        'project_id' => 'required|exists:projects,id',
     ]);
 
     $validated['password'] = Hash::make($validated['password']);
@@ -41,10 +42,11 @@ public function store(Request $request)
     
 }
 
-  public function index(Request $request)
+public function index(Request $request)
 {
-    $query = Tenant::query();
+    $query = Tenant::with('project'); // با eager load شروع می‌کنیم
 
+    // فیلتر بر اساس search
     if ($request->filled('filter')) {
         $query->where(function ($q) use ($request) {
             $q->where('userName', 'like', '%' . $request->filter . '%')
@@ -52,22 +54,27 @@ public function store(Request $request)
         });
     }
 
+    // فیلتر بر اساس وضعیت
     if ($request->filled('status')) {
         $query->where('status', $request->status);
     }
 
+    // فیلتر بر اساس تاریخ
     if ($request->filled('created_at')) {
         $query->whereDate('created_at', $request->created_at);
     }
 
+    // مرتب‌سازی
     if ($request->filled('sort_by')) {
         $direction = $request->descending === 'true' ? 'desc' : 'asc';
         $query->orderBy($request->sort_by, $direction);
     }
 
-    $perPage = $request->per_page ?? 10;
+    // صفحه‌بندی
+    $perPage = $request->get('per_page', 10);
+    $tenants = $query->paginate($perPage);
 
-    return response()->json($query->paginate($perPage));
+    return response()->json($tenants);
 }
 
 
@@ -82,6 +89,7 @@ public function update(Request $request, $id)
             'companyName' => 'required|string',
             'domainName' => 'required|string|unique:tenants,domain_name,' . $id,
             'phoneNumber' => 'nullable|string',
+             
         ]);
 
         $tenant = Tenant::findOrFail($id);

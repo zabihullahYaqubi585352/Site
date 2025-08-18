@@ -22,6 +22,7 @@ return new class extends Migration
         $table->string('email')->unique();
         $table->string('password');
         $table->string('domainName')->unique();
+        $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
         $table->timestamps();
         $table->softDeletes();
     });

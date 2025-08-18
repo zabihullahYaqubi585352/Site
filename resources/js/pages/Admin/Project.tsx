@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 const Project = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [newpro, setNewpro] = useState(0);
+
     const [projects, setProjects] = useState<ProjectType[]>([]);
     //state for form inputs
     const [formData, setFormData] = useState({
@@ -55,6 +57,8 @@ const Project = () => {
                 },
             });
 
+            setNewpro(newpro + 1);
+
             console.log('Project saved:', res.data);
 
             // Close modal and reset form
@@ -68,12 +72,23 @@ const Project = () => {
         }
     };
 
+    const getProjects = async () => {
+        try {
+            axios
+                .get('/projects')
+                .then((response) => setProjects(response.data))
+                .catch((error) => console.error('Error loading projects', error));
+        } catch (error) {}
+    };
     useEffect(() => {
-        axios
-            .get('/projects')
-            .then((response) => setProjects(response.data))
-            .catch((error) => console.error('Error loading projects', error));
-    }, [projects]);
+        getProjects();
+    }, [newpro]);
+    // useEffect(() => {
+    //     axios
+    //         .get('/projects')
+    //         .then((response) => setProjects(response.data))
+    //         .catch((error) => console.error('Error loading projects', error));
+    // }, [projects]);
 
     return (
         <div className="min-h-screen p-8 text-white">
@@ -83,11 +98,7 @@ const Project = () => {
             <div className="mx-auto my-8 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
                     <div key={project.id} className="flex flex-col overflow-hidden rounded-2xl bg-transparent shadow-lg">
-                        <img
-                            src={`http://localhost:8000/storage/projects/${project.image}`}
-                            alt={project.projectName}
-                            className="h-62 w-full object-cover"
-                        />
+                        <img src={`/storage/projects/${project.image}`} alt={project.projectName} className="h-62 w-full object-cover" />
 
                         <div className="p-4 text-black">
                             <h3 className="text-lg font-semibold uppercase">{project.projectName}</h3>

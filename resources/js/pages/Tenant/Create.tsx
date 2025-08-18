@@ -4,7 +4,7 @@ import { LinkForwardIcon, UserIcon } from 'hugeicons-react';
 
 import { toast } from 'react-toastify';
 
-const CreateTenant = ({ id }: { id?: string }) => {
+const CreateTenant = ({ project }: { project: any }) => {
     const { data, setData, post, processing, errors } = useForm({
         userName: '',
         companyName: '',
@@ -12,6 +12,7 @@ const CreateTenant = ({ id }: { id?: string }) => {
         email: '',
         password: '',
         domainName: '',
+        project_id: project.id, // preload project_id
     });
 
     const submit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,7 +21,7 @@ const CreateTenant = ({ id }: { id?: string }) => {
         try {
             const response = await axios.post('/tenants', {
                 ...data,
-                product_id: id, // send the product/system ID if needed
+                // send the product/system ID if needed
             });
             toast.success('Form submitted successfully!');
             router.get('/');
@@ -37,10 +38,15 @@ const CreateTenant = ({ id }: { id?: string }) => {
     };
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-6">
-            <div className="max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg">
-                <div className="flex flex-col items-center justify-center gap-2 p-4">
-                    <p className="text-xl font-semibold text-gray-600">Create your account. For the system</p>
-                    <span className="text-2xl font-medium text-[#2baa8d]">{id}</span>
+            <div className="max-w-2xl overflow-hidden rounded-2xl bg-white shadow-lg">
+                <img
+                    src={`http://localhost:8000/storage/projects/${project.image}`}
+                    alt={project.projectName}
+                    className="h-[200px] w-full object-cover"
+                />
+                <div className="flex flex-col items-center gap-2 p-4">
+                    <p className="text-xl font-semibold text-gray-600">Create account for</p>
+                    <span className="text-2xl font-medium text-[#2baa8d]">{project.projectName}</span>
                 </div>
             </div>
 

@@ -16,16 +16,7 @@ const DigitalPortfolio = () => {
     const { t, i18n } = useTranslation();
     const [portfolios, setPortfolios] = useState([]);
     const isRTL = i18n.dir() === 'rtl';
-    // const portfolios = [
-    //     { img: one, titleKey: 'portfolio.transport' },
-    //     { img: tow, titleKey: 'portfolio.octane' },
-    //     { img: three, titleKey: 'portfolio.nanonet' },
-    //     { img: four, titleKey: 'portfolio.metal' },
-    //     { img: five, titleKey: 'portfolio.abacus' },
-    //     { img: six, titleKey: 'portfolio.adaptix' },
-    //     { img: seven, titleKey: 'portfolio.topbook' },
-    //     { img: eight, titleKey: 'portfolio.afghanSharq' },
-    // ];
+
     useEffect(() => {
         axios
             .get('/projects')
@@ -126,7 +117,7 @@ const DigitalPortfolio = () => {
                 {portfolios?.map((e, i) => (
                     <div
                         key={i}
-                        className="group relative z-10 mx-4 overflow-hidden rounded-xl bg-amber-500 before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]"
+                        className="group relative z-10 mx-4 overflow-hidden rounded-xl before:absolute before:top-[20px] before:left-[20px] before:h-[90%] before:w-[1px] after:absolute after:right-[20px] after:bottom-[20px] after:h-[1px] after:w-[90%] hover:before:bg-[#2baa8d] hover:after:bg-[#2baa8d]"
                     >
                         <a href="" className="w-full cursor-pointer">
                             <img

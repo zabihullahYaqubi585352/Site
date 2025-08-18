@@ -60,11 +60,12 @@
         // Order routes
         Route::controller(OrderController::class)->group(function () {
             Route::get('/order', 'index')->name('order.index');
-            Route::get('/product/{id}', 'getProject')->name('order.getProject');
-       Route::get('/product/detials/{id}', [ProjectController::class, 'getDetials'])->name('getDetials');
+            Route::get('/product/{id}', 'getProject')->name('getProject');
+      
             
         });
 
+         Route::get('/product/detials/{id}', [ProjectController::class, 'getDetials'])->name('getDetials');
         // Include additional route files
         require __DIR__ . '/settings.php';
         require __DIR__ . '/auth.php';
